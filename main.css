@@ -4,17 +4,17 @@ darker pink ~ #EC5D53
 */
 :root {
     --ff-body: 'Satoshi', sans-serif;
-    --fs-heading: 4rem;
-    --fs-sub-heading: 3.25rem;
+    --fs-heading: 4.25rem;
+    --fs-sub-heading: 4rem;
     --fs-body-heading: 3rem;
     /* --fs-sm: 1.5vw;
     --fs-med: 2vw;
     --fs-lg: 2.5vw;
     --fs-xlg: 3vw; */
-    --fs-sm: 0.7rem;
-    --fs-med: 0.8rem;
-    --fs-lg: 0.8rem;
-    --fs-xlg: 1rem;
+    --fs-sm: 1rem;
+    --fs-med: 1.2rem;
+    --fs-lg: 1.5rem;
+    --fs-xlg: 1.8rem;
 }
 
 *, *:after, *:before {
@@ -153,10 +153,11 @@ nav a:hover {
 
 /*#region HOME PAGE*/
 .home {
-    margin-top: 5rem;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
 }
 
 .home .title {
@@ -167,12 +168,15 @@ nav a:hover {
 
 #top-line {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 3rem;
 }
 
 #top-line p {
     flex: 0 1 auto;
+    order: 2;
     font-family: "Inter", sans-serif;
     font-size: var(--fs-sub-heading);
     font-weight: 800;
@@ -181,12 +185,13 @@ nav a:hover {
 
 #top-line picture {
     flex: 0 1;
+    order: 1;
     max-width: 100%;
 }
 
 #top-line picture div {
-    width: 4rem;
-    height: 4rem;
+    width: 7rem;
+    height: 7rem;
     /* border: 2px solid black; */
     border-radius: 50%;
     background-color: black;
@@ -203,7 +208,7 @@ nav a:hover {
 .name-imgs {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     /* border: 2px solid black; */
@@ -218,7 +223,13 @@ nav a:hover {
 }
 
 #lottie-animation1 {
+    order: 1;
     transform: rotate(-10deg);
+}
+
+#calligraphy-img {
+    order: 2;
+    max-width: 15rem;
 }
 
 .social-icons {
@@ -242,7 +253,7 @@ nav a:hover {
 }
 
 .social-icons a img {
-    width: 1.25rem;
+    width: 2rem;
 }
 /*#endregion HOME PAGE*/
 
