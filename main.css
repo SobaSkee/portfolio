@@ -4,8 +4,8 @@ darker pink ~ #EC5D53
 */
 :root {
     --ff-body: 'Satoshi', sans-serif;
-    --fs-heading: 4.25rem;
-    --fs-sub-heading: 4rem;
+    --fs-heading: 4rem;
+    --fs-sub-heading: 3rem;
     --fs-body-heading: 3rem;
     /* --fs-sm: 1.5vw;
     --fs-med: 2vw;
@@ -48,7 +48,6 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 0.5rem;
     padding: 0.5rem;
     width: 90%;
 }
@@ -157,10 +156,11 @@ nav a:hover {
 
 /*#region HOME PAGE*/
 .home {
-    margin-top: 8rem;
+    /* margin-top: 7rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
@@ -175,7 +175,6 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
 }
 
 #top-line p {
@@ -222,18 +221,22 @@ nav a:hover {
     height: auto;
     padding: 0.5rem;
     transform: rotate(5deg);
-    /* flex: 1 1 auto; */
-    /* border: 2px solid black; */
+}
+
+#lottie-animation-container {
+    height: 100%;
 }
 
 #lottie-animation1 {
-    order: 1;
-    transform: rotate(-10deg);
+    /* position: absolute; */
+    width: 20rem; 
+    transform: rotate(-15deg) translateX(-2rem);
 }
 
 #calligraphy-img {
     order: 2;
-    max-width: 15rem;
+    max-width: 17rem;
+    transform: rotate(-8deg) translateX(5rem);
 }
 
 .social-icons {
@@ -244,7 +247,6 @@ nav a:hover {
     gap: 0.4rem;
 }
 
-
 .social-icons a {
     padding: 0.2rem;
     display: flex;
@@ -252,12 +254,13 @@ nav a:hover {
     border-radius: 50%;
     align-items: center;
 }
+
 .social-icons a:hover {
     border: 2px solid black;
 }
 
 .social-icons a img {
-    width: 2rem;
+    width: 2.5rem;
 }
 /*#endregion HOME PAGE*/
 
@@ -302,8 +305,11 @@ nav a:hover {
 /* SMALL SIZED SCREENS */
 @media (min-width: 576px) {
     :root {
-        --fs-sm: 0.5rem;
-        --fs-med: 0.8rem;
+        --fs-heading: 6rem;
+        --fs-sub-heading: 5rem;
+        --fs-body-heading: 3rem;
+        --fs-sm: 0.8rem;
+        --fs-med: 1rem;
         --fs-lg: 1rem;
         --fs-xlg: 1.25rem;
     }
@@ -312,32 +318,67 @@ nav a:hover {
         display: flex;
     }
 
+    nav ul {
+        padding: 1rem;
+    }
+
     #menu-icon {
         display: none;
     }
 
-    #top-line picture div {
-        width: 2rem;
-        height: 2rem;
+    .home {
+        margin-top: 2rem;
     }
 
-    .social-icons a img {
-        width: 3rem;
+    #top-line {
+        flex-direction: row;
     }
+
+    #top-line picture div {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    #top-line p {
+        order: 1;
+    }
+    
+    #top-line picture {
+        order: 2;
+    }
+
+    .name-imgs {
+        flex-direction: row;
+    }
+
+    #lottie-animation1 {
+    /* position: absolute; */
+        width: 10rem; 
+        transform: rotate(-15deg) translateX(0);
+    }
+
+    #calligraphy-img {
+        width: 12rem;
+        transform: translateX(0);
+    }
+
 }
 
 /* MEDIUM SIZED SCREEN */
 @media (min-width: 768px) {
     :root {
-        --fs-sm: 0.6rem;
+        --fs-heading: 8rem;
+        --fs-sub-heading: 7rem;
+        --fs-body-heading: 4rem;
+        --fs-sm: 0.8rem;
         --fs-med: 1rem;
-        --fs-lg: 1.25rem;
-        --fs-xlg: 1.5rem;
+        /* --fs-lg: 1.5rem;
+        --fs-xlg: 2rem; */
     }
 
     #top-line picture div {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
     }
 
     .social-icons a img {
@@ -347,14 +388,34 @@ nav a:hover {
 }
 
 /* LARGE SIZED SCREEN (DESKTOP) */
-@media (min-width: 1200px) {
-    #top-line picture div {
-        width: 12rem;
-        height: 12rem;
+@media (min-width: 1000px) {
+    :root {
+        --fs-heading: 9rem;
+        --fs-sub-heading: 8rem;
+        --fs-body-heading: 3rem;
+        --fs-sm: 0.8rem;
+        --fs-med: 1rem;
+        --fs-lg: 1.5rem;
+        --fs-xlg: 2rem;
     }
 
-    .social-icons a img {
-        width: 5.5rem;
+    #top-line picture div {
+        width: 7.5rem;
+        height: 7.5rem;
     }
+
+    #lottie-animation1 {
+        /* position: absolute; */
+            width: 15rem; 
+        }
+    
+        #calligraphy-img {
+            width: 20rem;
+        }
+
+        .social-icons a img {
+            width: 3.5rem;
+        }
+    
 }
 /*#endregion MEDIA QUERIES */
