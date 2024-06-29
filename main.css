@@ -44,7 +44,7 @@ body {
 section {
     min-height: 100vh;
     /* margin-top: 50rem; */
-    /* margin-bottom: 3rem; */
+    padding-top: 6rem;
 }
 
 /*#region NAV BAR*/
@@ -185,7 +185,7 @@ nav a:hover {
 /*#region HOME PAGE*/
 
 .home {
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     border: 2px solid black;
     /* margin-top: 20rem; */
     display: flex;
@@ -362,7 +362,7 @@ nav a:hover {
 
 /*#region SKILLS PAGE*/
 .skills {
-    padding-top: 5rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
