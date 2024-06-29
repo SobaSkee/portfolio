@@ -43,8 +43,8 @@ body {
 
 section {
     min-height: 100vh;
-    /* margin-top: 50rem; */
     padding-top: 6rem;
+    padding-bottom: 2rem;
 }
 
 /*#region NAV BAR*/
@@ -320,26 +320,26 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
 }
 
 .container .image-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem;
+    padding: 2rem;
+    /* box-shadow: 2px 0px 2px hsl(0deg 0% 0% / 0.38); */
 } 
 
 .image-wrapper img {
     width: 15rem;
-    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
 }
 
 .container .text-wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    padding: 1rem;
-    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+    padding: 2rem;
+    border-top: 1px solid hsl(0deg 0% 0% / 0.38);
 
 }
 
@@ -558,7 +558,7 @@ nav a:hover {
     :root {
         --fs-heading: 7rem;
         --fs-sub-heading: 6rem;
-        --fs-body-heading: 5rem;
+        --fs-body-heading: 4rem;
         --fs-body-sub-heading: 2rem;
         
         --fs-sm: 0.8rem;
@@ -586,6 +586,7 @@ nav a:hover {
         scroll-snap-stop: always;
     }
 
+    /*#region NAV AND HOME QUERIES */
     #top-line picture div {
         width: 7rem;
         height: 7rem;
@@ -602,14 +603,19 @@ nav a:hover {
     .image-wrapper img {
         width: 20rem;
     }
+    /*#endregion NAV AND HOME QUERIES */
 
+    /*#region ABOUT QUERIES */
     .about .container {
         flex-direction: row;
     }
 
-    .container .text-wrapper {
-        margin-left: 2.5rem;
+    .about .container .text-wrapper {
+        border-left: 1px solid hsl(0deg 0% 0% / 0.38);
+        border-top: none;
     }
+
+    
 
     .text-wrapper h1 {
         font-size: var(--fs-body-heading);
@@ -618,8 +624,10 @@ nav a:hover {
     .text-wrapper p {
         font-size: var(--fs-lg);
     }
+    
+    /*#endregion ABOUT QUERIES */
 
-
+    /*#region SKILLS QUERIES */
     #left-slide-track:hover, #right-slide-track:hover {
         animation-play-state: paused;
     }
@@ -627,6 +635,7 @@ nav a:hover {
     .slide:hover {
         transform: scale(1.1);
     }
+    /*#endregion SKILLS QUERIES */
 }
 
 /* LARGE SIZED SCREEN (DESKTOP) */
@@ -634,10 +643,8 @@ nav a:hover {
     :root {
         --fs-heading: 9rem;
         --fs-sub-heading: 8rem;
-        /* --fs-body-heading: 6rem;
-        --fs-body-sub-heading: 2rem; */
-        --fs-sm: 1.2em;
-        --fs-med: 2rem;
+        --fs-sm: 1em;
+        --fs-med: 1.2rem;
         --fs-lg: 1.5rem;
         --fs-xlg: 2rem;
 
@@ -648,6 +655,7 @@ nav a:hover {
         --slide-width: 11rem;
     }
 
+    /*#region NAV AND HOME QUERIES */
     #top-line picture div {
         width: 8rem;
         height: 8rem;
@@ -664,6 +672,7 @@ nav a:hover {
     .image-wrapper img {
         width: 28rem;
     }
+    /*#endregion NAV AND HOME QUERIES */
     
 }
 
