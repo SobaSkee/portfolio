@@ -19,12 +19,28 @@ darker pink ~ #EC5D53
     margin: 0;
 }
 
+html, body {
+    /* scroll-padding-top: 6rem; */
+    height: 100%;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+}
+
 body {
-    min-height: 100vh;
+    /* scroll-snap-type: mandatory; */
     background-color: #F5A59B;
     font-family: 'Satoshi', sans-serif;
     font-size: var(--fs-sm);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
 
 /*#region NAV BAR*/
 
@@ -74,7 +90,7 @@ nav ul li:first-child {
 #contact-button {
     border-radius: 0.5rem;
     background-color: black;
-    padding: 0.4rem;
+    padding: 0.8rem;
     border: none;
     margin-left: 0.5rem;
     align-items: center
@@ -158,7 +174,6 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 .home .title {
@@ -272,29 +287,47 @@ nav a:hover {
 
 /*#endregion HOME PAGE*/
 
+
+/*#region ABOUT PAGE*/
 .about {
-    /* margin-top: 1rem; */
-    width: 100%;
-}
-.about .container{
-    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    /* gap: 2rem; */
     border: 2px solid black;
-    padding: 3.5rem;
-    gap: 2rem;
 }
 
 .container .image-wrapper {
-    flex-basis: 40%;
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
 
 .image-wrapper img {
-    max-width: 100%;
+    width: 20rem;
+    /* border-radius: 1rem; */
+    /* border: 2px solid black; */
+    border: 1px solid black;
 }
 
 .container .text-wrapper {
-    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 2px solid black;
+    /* filter: drop-shadow(30px 10px 4px #030303); */
+
 }
 
 .text-wrapper h1 {
@@ -305,6 +338,8 @@ nav a:hover {
 .text-wrapper p {
     margin-bottom: 1rem;
 }
+
+/*#endregion ABOUT PAGE*/
 
 
 
@@ -321,7 +356,7 @@ nav a:hover {
         --fs-lg: 1rem;
         --fs-xlg: 1.25rem;
     }
-
+    /*#region NAV AND HOME QUERIES */
     nav ul .page-buttons {
         display: flex;
     }
@@ -365,9 +400,10 @@ nav a:hover {
     }
 
     #calligraphy-img {
-        /* width: 12rem; */
         transform: translateX(0);
     }
+    /*#endregion NAV AND HOME QUERIES*/
+
 
 }
 
@@ -394,7 +430,13 @@ nav a:hover {
         width: 15rem; 
     }
 
+    .image-wrapper img {
+        width: 20rem;
+    }
 
+    .about .container {
+        flex-direction: row;
+    }
 }
 
 /* LARGE SIZED SCREEN (DESKTOP) */
@@ -418,12 +460,12 @@ nav a:hover {
         width: 15rem; 
     }
 
-    /* #calligraphy-img {
-        width: 20rem;
-    } */
-
     .social-icons li a img {
         width: 4rem;
+    }
+
+    .image-wrapper img {
+        width: 25rem;
     }
     
 }
