@@ -19,8 +19,7 @@ darker pink ~ #EC5D53
     margin: 0;
 }
 
-html, body {
-    /* scroll-padding-top: 6rem; */
+html {
     height: 100%;
     margin: 0;
     scroll-snap-type: y mandatory;
@@ -168,8 +167,12 @@ nav a:hover {
 
 
 /*#region HOME PAGE*/
+
+
 .home {
-    margin-top: 2rem;
+    padding-top: 6rem;
+    border: 2px solid black;
+    /* margin-top: 20rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,13 +241,13 @@ nav a:hover {
 }
 
 #lottie-animation1 {
-    width: 20rem; 
-    transform: rotate(-15deg) translateX(-2rem);
+    width: 15rem; 
+    transform: rotate(-15deg) translateX(-4rem);
 }
 
 #calligraphy-img {
     order: 2;
-    width: 20rem;
+    width: 15rem;
     transform: rotate(-8deg) translateX(5rem);
 }
 
@@ -282,7 +285,7 @@ nav a:hover {
     justify-content: center;
 }
 .social-icons li a img {
-    width: 2.5rem;
+    width: 2rem;
 }
 
 /*#endregion HOME PAGE*/
@@ -410,8 +413,8 @@ nav a:hover {
 /* MEDIUM SIZED SCREEN */
 @media (min-width: 768px) {
     :root {
-        --fs-heading: 8rem;
-        --fs-sub-heading: 7rem;
+        --fs-heading: 7rem;
+        --fs-sub-heading: 6rem;
         --fs-body-heading: 4rem;
         --fs-sm: 0.8rem;
         --fs-med: 1rem;
@@ -423,11 +426,11 @@ nav a:hover {
     }
 
     .social-icons li a img {
-        width: 3rem;
+        width: 2rem;
     }
 
     #lottie-animation1 {
-        width: 15rem; 
+        width: 12rem; 
     }
 
     .image-wrapper img {
@@ -441,7 +444,7 @@ nav a:hover {
 
 /* LARGE SIZED SCREEN (DESKTOP) */
 @media (min-width: 1000px) {
-    :root {
+    /* :root {
         --fs-heading: 9rem;
         --fs-sub-heading: 8rem;
         --fs-body-heading: 3rem;
@@ -449,7 +452,7 @@ nav a:hover {
         --fs-med: 1.2rem;
         --fs-lg: 1.5rem;
         --fs-xlg: 2rem;
-    }
+    } */
 
     #top-line picture div {
         width: 8rem;
@@ -457,11 +460,11 @@ nav a:hover {
     }
 
     #lottie-animation1 {
-        width: 15rem; 
+        width: 10rem; 
     }
 
     .social-icons li a img {
-        width: 4rem;
+        width: 2.5rem;
     }
 
     .image-wrapper img {
