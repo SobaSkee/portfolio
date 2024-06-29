@@ -7,10 +7,20 @@ darker pink ~ #EC5D53
     --fs-heading: 4rem;
     --fs-sub-heading: 3rem;
     --fs-body-heading: 3rem;
+    --fs-body-sub-heading: 1.75rem;
     --fs-sm: 1rem;
     --fs-med: 1.2rem;
     --fs-lg: 1.5rem;
     --fs-xlg: 1.8rem;
+
+    /* for slider */
+    
+    /* default mobile size*/
+    --slide-img-height: 2.5rem;
+    --slide-img-width: 5rem;
+    --slide-height: 8rem;
+    --slide-width: 5rem;
+
 }
 
 *, *:after, *:before {
@@ -33,6 +43,8 @@ body {
 
 section {
     min-height: 100vh;
+    /* margin-top: 50rem; */
+    /* margin-bottom: 3rem; */
 }
 
 /*#region NAV BAR*/
@@ -170,9 +182,7 @@ nav a:hover {
 
 /*#endregion NAV BAR*/
 
-
 /*#region HOME PAGE*/
-
 
 .home {
     padding-top: 2rem;
@@ -295,7 +305,6 @@ nav a:hover {
 
 /*#endregion HOME PAGE*/
 
-
 /*#region ABOUT PAGE*/
 .about {
     display: flex;
@@ -353,10 +362,106 @@ nav a:hover {
 
 /*#region SKILLS PAGE*/
 .skills {
-    /* margin-top: 2rem; */
+    padding-top: 5rem;
     display: flex;
     align-items: center;
-    background-color: white;
+    justify-content: center;
+    /* background-color: white; */
+}
+
+.skills .container {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.skills .container h1 {
+    font-size: var(--fs-body-heading);
+}
+
+.skills .container h2 {
+    font-size: var(--fs-body-sub-heading);
+}
+
+.slider {
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    background: linear-gradient(90deg, rgba(236, 93, 83, 0.50) 0%, rgba(235, 235, 235, 0.50) 100.02%);
+}
+
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, rgba(235, 143, 136, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: var(--slide-height);
+    position: absolute;
+    width: var(--slide-width);
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    display: flex;
+    width: calc(var(--slide-width)*12);
+}
+
+#left-slide-track {
+    animation: autoScrollLeft 10s linear infinite;
+}
+
+#right-slide-track {
+    animation: autoScrollRight 10s linear infinite;
+}
+
+.slide {
+    /* border: 2px solid black; */
+    height: var(--slide-height);
+    width: var(--slide-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.slide p {
+    font-weight: 600;
+}
+
+.slide img {
+    height: var(--slide-img-height);
+    width: var(--slide-img-width);
+}
+
+
+
+@keyframes autoScrollLeft {
+	0% { transform: translateX(0); }
+	/* 100% { transform: translateX(calc(-7.25rem * 6))} */
+    100% { transform: translateX(calc(var(--slide-width)*-6));}
+}
+
+@keyframes autoScrollRight {
+	0% { transform: translateX(calc(var(--slide-width)*-6)); }
+	/* 100% { transform: translateX(calc(-7.25rem * 6))} */
+    100% { transform: translateX(0); }
 }
 
 /*#endregion SKILLS PAGE*/
@@ -369,19 +474,27 @@ nav a:hover {
     :root {
         --fs-heading: 6rem;
         --fs-sub-heading: 5rem;
-        --fs-body-heading: 3rem;
+        /* --fs-body-heading: 3rem;
+        --fs-body-sub-heading: 2rem; */
         --fs-sm: 0.8rem;
         --fs-med: 1rem;
         --fs-lg: 1rem;
         --fs-xlg: 1.25rem;
-    }
+
+        /* for slider */
+
+        --slide-img-height: 4rem;
+        --slide-img-width: 6.5rem;
+        --slide-height: 10rem;
+        --slide-width: 6.5rem;
+        }
     /*#region NAV AND HOME QUERIES */
     nav ul .page-buttons {
         display: flex;
     }
 
     nav ul {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     #menu-icon {
@@ -423,10 +536,21 @@ nav a:hover {
     }
     /*#endregion NAV AND HOME QUERIES*/
 
+    /*#region ABOUT QUERIES */
     .image-wrapper img {
         width: 25rem;
     }
+    /*#endregion ABOUT QUERIES */
 
+    /*#region SKILLS QUERIES */
+    #left-slide-track:hover, #right-slide-track:hover {
+        animation-play-state: paused;
+    }
+    
+    .slide:hover {
+        transform: scale(1.1);
+    }
+    /*#endregion SKILLS QUERIES */
 }
 
 /* MEDIUM SIZED SCREEN */
@@ -434,9 +558,22 @@ nav a:hover {
     :root {
         --fs-heading: 7rem;
         --fs-sub-heading: 6rem;
-        --fs-body-heading: 2rem;
+        --fs-body-heading: 5rem;
+        --fs-body-sub-heading: 2rem;
+        
         --fs-sm: 0.8rem;
         --fs-med: 1rem;
+
+        /* for slider */
+        --slide-img-height: 3rem;
+        --slide-img-width: 8rem;
+        --slide-height: 8rem;
+        --slide-width: 8rem;
+
+        --slide-img-height: 5rem;
+        --slide-img-width: 15rem;
+        --slide-height: 10rem;
+        --slide-width: 15rem;
     }
 
     html {
@@ -463,7 +600,7 @@ nav a:hover {
     }
 
     .image-wrapper img {
-        width: 30rem;
+        width: 20rem;
     }
 
     .about .container {
@@ -481,8 +618,15 @@ nav a:hover {
     .text-wrapper p {
         font-size: var(--fs-lg);
     }
+
+
+    #left-slide-track:hover, #right-slide-track:hover {
+        animation-play-state: paused;
+    }
     
-    
+    .slide:hover {
+        transform: scale(1.1);
+    }
 }
 
 /* LARGE SIZED SCREEN (DESKTOP) */
@@ -490,11 +634,18 @@ nav a:hover {
     :root {
         --fs-heading: 9rem;
         --fs-sub-heading: 8rem;
-        --fs-body-heading: 3rem;
-        --fs-sm: 1rem;
-        --fs-med: 1.2rem;
+        /* --fs-body-heading: 6rem;
+        --fs-body-sub-heading: 2rem; */
+        --fs-sm: 1.2em;
+        --fs-med: 2rem;
         --fs-lg: 1.5rem;
         --fs-xlg: 2rem;
+
+        /* for slider */
+        --slide-img-height: 5rem;
+        --slide-img-width: 11rem;
+        --slide-height: 10rem;
+        --slide-width: 11rem;
     }
 
     #top-line picture div {
@@ -511,8 +662,21 @@ nav a:hover {
     }
 
     .image-wrapper img {
-        width: 35rem;
+        width: 28rem;
     }
     
 }
+
+
+@media (min-width: 1400px) {
+    :root {
+        /* for slider */
+        --slide-img-height: 5rem;
+        --slide-img-width: 15rem;
+        --slide-height: 10rem;
+        --slide-width: 15rem;
+    }
+    
+}
+
 /*#endregion MEDIA QUERIES */
