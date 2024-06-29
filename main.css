@@ -354,8 +354,13 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-.text-wrapper span {
+.text-wrapper h1 span {
     text-decoration: underline;
+}
+
+.text-wrapper p span {
+    text-decoration: underline;
+    text-decoration-color: #EC5D53;
 }
 
 /*#endregion ABOUT PAGE*/
@@ -381,6 +386,7 @@ nav a:hover {
 
 .skills .container h1 {
     font-size: var(--fs-body-heading);
+    text-decoration: underline;
 }
 
 .skills .container h2 {
@@ -394,6 +400,7 @@ nav a:hover {
     overflow: hidden;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
     background: linear-gradient(90deg, rgba(236, 93, 83, 0.50) 0%, rgba(235, 235, 235, 0.50) 100.02%);
+    margin-bottom: 2rem;
 }
 
 .slider::before,
@@ -466,6 +473,9 @@ nav a:hover {
 
 /*#endregion SKILLS PAGE*/
 
+/*#region PROJECTS PAGE*/
+
+/*#endregion PROJECTS PAGE*/
 
 /*#region MEDIA QUERIES*/
 
