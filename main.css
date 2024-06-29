@@ -7,10 +7,6 @@ darker pink ~ #EC5D53
     --fs-heading: 4rem;
     --fs-sub-heading: 3rem;
     --fs-body-heading: 3rem;
-    /* --fs-sm: 1.5vw;
-    --fs-med: 2vw;
-    --fs-lg: 2.5vw;
-    --fs-xlg: 3vw; */
     --fs-sm: 1rem;
     --fs-med: 1.2rem;
     --fs-lg: 1.5rem;
@@ -50,6 +46,7 @@ nav ul {
     align-items: center;
     padding: 0.5rem;
     width: 90%;
+    gap: 1.5rem;
 }
 
 nav ul .page-buttons {
@@ -156,7 +153,7 @@ nav a:hover {
 
 /*#region HOME PAGE*/
 .home {
-    /* margin-top: 7rem; */
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +192,6 @@ nav a:hover {
 #top-line picture div {
     width: 7rem;
     height: 7rem;
-    /* border: 2px solid black; */
     border-radius: 50%;
     background-color: black;
     border: 1px solid black;
@@ -214,7 +210,6 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid black; */
 }
 .name-imgs img {
     max-width: 40%;
@@ -228,44 +223,57 @@ nav a:hover {
 }
 
 #lottie-animation1 {
-    /* position: absolute; */
     width: 20rem; 
     transform: rotate(-15deg) translateX(-2rem);
 }
 
 #calligraphy-img {
     order: 2;
-    max-width: 17rem;
+    width: 20rem;
     transform: rotate(-8deg) translateX(5rem);
 }
 
 .social-icons {
-    margin-top: 2.5rem;
-    max-width: 100%;
-    /* border: 2px solid black; */
+    margin-top: 2rem;
+    height: 5rem;
+    width: 100%;
     display: flex;
-    gap: 0.4rem;
-}
-
-.social-icons a {
-    padding: 0.2rem;
-    display: flex;
-    border: 1px solid transparent;
-    border-radius: 50%;
+    justify-content: center;
     align-items: center;
 }
 
-.social-icons a:hover {
+.social-icons ul {
+    gap: 1rem;
+    list-style: none;
+    display: flex;
+}
+
+.social-icons li {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+.social-icons li:hover {
     border: 2px solid black;
 }
 
-.social-icons a img {
+.social-icons li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons li a img {
     width: 2.5rem;
 }
+
 /*#endregion HOME PAGE*/
 
 .about {
-    margin-top: 10vh;
+    /* margin-top: 1rem; */
     width: 100%;
 }
 .about .container{
@@ -335,8 +343,8 @@ nav a:hover {
     }
 
     #top-line picture div {
-        width: 5.5rem;
-        height: 5.5rem;
+        width: 6rem;
+        height: 6rem;
     }
 
     #top-line p {
@@ -352,13 +360,12 @@ nav a:hover {
     }
 
     #lottie-animation1 {
-    /* position: absolute; */
         width: 10rem; 
         transform: rotate(-15deg) translateX(0);
     }
 
     #calligraphy-img {
-        width: 12rem;
+        /* width: 12rem; */
         transform: translateX(0);
     }
 
@@ -372,18 +379,21 @@ nav a:hover {
         --fs-body-heading: 4rem;
         --fs-sm: 0.8rem;
         --fs-med: 1rem;
-        /* --fs-lg: 1.5rem;
-        --fs-xlg: 2rem; */
     }
 
     #top-line picture div {
-        width: 6rem;
-        height: 6rem;
+        width: 7rem;
+        height: 7rem;
     }
 
-    .social-icons a img {
+    .social-icons li a img {
         width: 3rem;
     }
+
+    #lottie-animation1 {
+        width: 15rem; 
+    }
+
 
 }
 
@@ -393,29 +403,28 @@ nav a:hover {
         --fs-heading: 9rem;
         --fs-sub-heading: 8rem;
         --fs-body-heading: 3rem;
-        --fs-sm: 0.8rem;
-        --fs-med: 1rem;
+        --fs-sm: 1rem;
+        --fs-med: 1.2rem;
         --fs-lg: 1.5rem;
         --fs-xlg: 2rem;
     }
 
     #top-line picture div {
-        width: 7.5rem;
-        height: 7.5rem;
+        width: 8rem;
+        height: 8rem;
     }
 
     #lottie-animation1 {
-        /* position: absolute; */
-            width: 15rem; 
-        }
-    
-        #calligraphy-img {
-            width: 20rem;
-        }
+        width: 15rem; 
+    }
 
-        .social-icons a img {
-            width: 3.5rem;
-        }
+    /* #calligraphy-img {
+        width: 20rem;
+    } */
+
+    .social-icons li a img {
+        width: 4rem;
+    }
     
 }
 /*#endregion MEDIA QUERIES */
