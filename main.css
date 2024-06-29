@@ -303,7 +303,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
 .about .container {
@@ -424,7 +424,7 @@ nav a:hover {
     /*#endregion NAV AND HOME QUERIES*/
 
     .image-wrapper img {
-        width: 17rem;
+        width: 25rem;
     }
 
 }
@@ -463,7 +463,7 @@ nav a:hover {
     }
 
     .image-wrapper img {
-        width: 20rem;
+        width: 30rem;
     }
 
     .about .container {
@@ -511,7 +511,7 @@ nav a:hover {
     }
 
     .image-wrapper img {
-        width: 25rem;
+        width: 35rem;
     }
     
 }
