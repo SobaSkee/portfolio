@@ -36,9 +36,14 @@ body {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
 }
+
+/* .sections {
+    display: flex;
+    flex-direction: column;
+} */
 
 
 /*#region NAV BAR*/
@@ -49,6 +54,7 @@ nav {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -143,6 +149,7 @@ nav a:hover {
     justify-content: flex-start;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .sidebar button {
@@ -158,11 +165,20 @@ nav a:hover {
 .sidebar button:hover {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
 }
 
 .sidebar a:hover {
     border-bottom: none;
 }
+
+.sidebar a {
+    color: black;
+}
+/* .sidebar a:visited {
+    color: black;
+} */
+
 /*#endregion NAV BAR*/
 
 
@@ -170,7 +186,7 @@ nav a:hover {
 
 
 .home {
-    /* padding-top: 6rem; */
+    padding-top: 2rem;
     border: 2px solid black;
     /* margin-top: 20rem; */
     display: flex;
@@ -241,18 +257,18 @@ nav a:hover {
 }
 
 #lottie-animation1 {
-    width: 15rem; 
+    width: 10rem; 
     transform: rotate(-15deg) translateX(-4rem);
 }
 
 #calligraphy-img {
     order: 2;
-    width: 15rem;
+    width: 20rem;
     transform: rotate(-8deg) translateX(5rem);
 }
 
 .social-icons {
-    margin-top: 2rem;
+
     height: 5rem;
     width: 100%;
     display: flex;
@@ -261,7 +277,7 @@ nav a:hover {
 }
 
 .social-icons ul {
-    gap: 1rem;
+    gap: 0.5rem;
     list-style: none;
     display: flex;
 }
@@ -285,7 +301,7 @@ nav a:hover {
     justify-content: center;
 }
 .social-icons li a img {
-    width: 2rem;
+    width: 2.5rem;
 }
 
 /*#endregion HOME PAGE*/
@@ -298,15 +314,14 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* height: 100vh; */
 }
 
 .about .container {
     display: flex;
     flex-direction: column;
-    margin: 2rem;
+    margin-top: 6rem;
     /* gap: 2rem; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .container .image-wrapper {
@@ -318,7 +333,7 @@ nav a:hover {
 } 
 
 .image-wrapper img {
-    width: 20rem;
+    width: 18rem;
     /* border-radius: 1rem; */
     /* border: 2px solid black; */
     border: 1px solid black;
@@ -327,8 +342,7 @@ nav a:hover {
 .container .text-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    border: 2px solid black;
+    padding: 3rem;
     /* filter: drop-shadow(30px 10px 4px #030303); */
 
 }
