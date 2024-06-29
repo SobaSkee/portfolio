@@ -186,7 +186,7 @@ nav a:hover {
 
 .home {
     /* padding-top: 2rem; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* margin-top: 20rem; */
     display: flex;
     flex-direction: column;
