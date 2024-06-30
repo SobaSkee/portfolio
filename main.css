@@ -354,13 +354,16 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-.text-wrapper h1 span {
-    text-decoration: underline;
-}
-
-.text-wrapper p span {
-    text-decoration: underline;
+/* .text-wrapper p span {
     text-decoration-color: #EC5D53;
+} */
+
+.text-wrapper span {
+    font-weight: 600;
+    background: linear-gradient(90deg, rgb(114, 114, 202), rgb(250, 3, 44));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*#endregion ABOUT PAGE*/
@@ -386,7 +389,6 @@ nav a:hover {
 
 .skills .container h1 {
     font-size: var(--fs-body-heading);
-    text-decoration: underline;
 }
 
 .skills .container h2 {
@@ -474,7 +476,9 @@ nav a:hover {
 /*#endregion SKILLS PAGE*/
 
 /*#region PROJECTS PAGE*/
-
+.projects {
+    
+}
 /*#endregion PROJECTS PAGE*/
 
 /*#region MEDIA QUERIES*/
@@ -624,8 +628,6 @@ nav a:hover {
         border-left: 1px solid hsl(0deg 0% 0% / 0.38);
         border-top: none;
     }
-
-    
 
     .text-wrapper h1 {
         font-size: var(--fs-body-heading);
