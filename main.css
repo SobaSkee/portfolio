@@ -699,8 +699,8 @@ nav a:hover {
         /* for slider */
         --slide-img-height: 5rem;
         --slide-img-width: 15rem;
-        --slide-height: 10rem;
-        --slide-width: 15rem;
+        --slide-height: 20rem;
+        --slide-width: 30rem;
     }
     
 }
