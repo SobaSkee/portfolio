@@ -535,12 +535,6 @@ nav a:hover {
     background: url(./assets/images/sobacinema-screenshot.png) no-repeat center center / cover;
 }
 
-
-
-.card:hover {
-    transform: scale(1.02);
-}
-
 .card-content {
     padding: 2rem 1rem 1rem 1rem;
     margin-top: auto;
@@ -548,23 +542,36 @@ nav a:hover {
         hsl(0 80% 70% / 0),
         hsl(5 80% 70% / .8) 10%,
         hsl(0 80% 70% / 1));
-    transform: translateY(70%);
-    transition: transform 500ms ease;
 }
 
-.card:hover .card-content {
+
+@media (hover) {
+    .card-content {
+        transform: translateY(70%);
+        transition: transform 500ms ease;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+    }
+    .card:hover .card-content {
     transform: translateY(0);
     transition-delay: 200ms;
+    }
+
+    .card-content > *:not(.card-title) {
+        opacity: 0;
+        transition: transform 500ms linear;
+    }
+
+    .card:hover .card-content > *:not(.card-title) {
+        opacity: 1;
+    }
+
+    
 }
 
-.card-content > *:not(.card-title) {
-    opacity: 0;
-    transition: transform 500ms linear;
-}
 
-.card:hover .card-content > *:not(.card-title) {
-    opacity: 1;
-}
 
 
 .card-content .tools {
