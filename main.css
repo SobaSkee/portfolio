@@ -41,6 +41,7 @@ body {
     background-color: #F5A59B;
     font-family: 'Satoshi', sans-serif;
     font-size: var(--fs-reg);
+    height: 200vh;
 }
 
 section {
@@ -400,7 +401,7 @@ nav a:visited {
 .skills {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;   
 }
 
 .skills .container {
@@ -530,13 +531,13 @@ nav a:visited {
 .card {
     grid-row: span 1;
     grid-column: span 1;
-    height: 35rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: transform 500ms ease;
+    transition: transform 400ms ease;
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
@@ -559,14 +560,14 @@ nav a:visited {
     margin-top: auto;
     background: linear-gradient(
         hsl(0 80% 70% / 0),
-        hsl(5 80% 70% / .8) 10%,
+        hsl(5 80% 70% / .9) 10%,
         hsl(0 80% 70% / 1));
 }
 
 @media (hover) {
     .card-content {
         transform: translateY(70%);
-        transition: transform 500ms ease;
+        transition: transform 400ms ease;
     }
 
     .card:hover {
@@ -579,7 +580,7 @@ nav a:visited {
 
     .card-content > *:not(.card-title) {
         opacity: 0;
-        transition: transform 500ms linear;
+        transition: transform 400ms linear;
     }
 
     .card:hover .card-content > *:not(.card-title) {
@@ -745,7 +746,7 @@ nav a:visited {
         scroll-snap-align: start;
         scroll-snap-stop: always;
         padding-top: 8rem;
-        padding-bottom: 5rem;
+        padding-bottom: 8rem;
     }
 
     /*#region NAV AND HOME QUERIES */
