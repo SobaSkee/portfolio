@@ -544,7 +544,6 @@ nav a:hover {
         hsl(0 80% 70% / 1));
 }
 
-
 @media (hover) {
     .card-content {
         transform: translateY(70%);
@@ -567,12 +566,7 @@ nav a:hover {
     .card:hover .card-content > *:not(.card-title) {
         opacity: 1;
     }
-
-    
 }
-
-
-
 
 .card-content .tools {
     display: flex;
