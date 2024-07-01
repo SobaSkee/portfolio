@@ -499,7 +499,6 @@ nav a:hover {
 }
 
 .projects .container {
-    border: 2px solid black;
     width: 75vw;
     display: grid;
     /* align-items: center; */
@@ -510,31 +509,44 @@ nav a:hover {
 /* padding top right bottom left*/
 
 .card {
-    /* padding: 5rem 0 0 0; */
     grid-row: span 1;
     grid-column: span 1;
-    /* border: 2px solid white; */
-    /* background-color: black; */
     height: 35rem;
     display: flex;
     flex-direction: column;
-    background: url(./assets/images/minesweeper.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     transition: transform 500ms ease;
     overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
 }
+
+.card-1 {
+    background: url(./assets/images/minesweeper-image.png) no-repeat left center / cover;
+}
+
+.card-2 {
+    background: url(./assets/images/pizzahat-screenshot.png) no-repeat left center / cover;
+}
+
+.card-3 {
+    background: url(./assets/images/sobacinema-screenshot.png) no-repeat center center / cover;
+}
+
+
 
 .card:hover {
     transform: scale(1.02);
 }
 
 .card-content {
-    padding: 3rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     margin-top: auto;
     background: linear-gradient(
         hsl(0 80% 70% / 0),
-        hsl(5 80% 70% / .8) 20%,
+        hsl(5 80% 70% / .8) 10%,
         hsl(0 80% 70% / 1));
     transform: translateY(70%);
     transition: transform 500ms ease;
@@ -558,6 +570,7 @@ nav a:hover {
 .card-content .tools {
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
     padding: 1rem 0 1rem 0;
     gap: 0.3rem;
@@ -572,9 +585,9 @@ nav a:hover {
 }
 
 .tools .tool {
-    border-radius: 1rem;
-    padding: 0.3rem 0.4rem 0.3rem 0.4rem;
+    border-radius: 0.8rem;
     border: 1px solid black;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
     /* min-width: fit-content; */
     display: flex;
     align-items: center;
@@ -584,7 +597,7 @@ nav a:hover {
 }
 
 .tool img {
-    width: 1.5em;
+    width: 1rem;
 }
 
 .tool p {
@@ -594,13 +607,14 @@ nav a:hover {
 
 .learn-more {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
 }
 
 .learn-more img {
     width: 2rem;
+    /* margin-left: 1rem; */
 }
 
 
@@ -805,10 +819,10 @@ nav a:hover {
 @media (min-width: 1400px) {
     :root {
         /* for slider */
-        --slide-img-height: 5rem;
+        --slide-img-height: 8rem;
         --slide-img-width: 15rem;
-        --slide-height: 20rem;
-        --slide-width: 30rem;
+        --slide-height: 15rem;
+        --slide-width: 15rem;
     }
     
 }
