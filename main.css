@@ -114,25 +114,26 @@ nav a {
     text-decoration: none;
     align-items: center;
     height: 100%;
+    transition: color 200ms ease;
+    color: inherit;
 }
 
-nav a:active {
-    color: black;
-}
-
+nav a:active,
 nav a:visited {
     color: black;
 }
 
+@media (hover) {
+    nav a:hover {
+        color: #EC5D53;
+        border-bottom: 1px solid #EC5D53;
+    }
 
-nav a:hover {
-    color: #EC5D53;
-    border-bottom: 1px solid #EC5D53;
+    #menu-icon a:hover {
+        border-bottom: none;
+    }
 }
 
-#menu-icon a:hover {
-    border-bottom: none;
-}
 
 .sidebar {
     position: fixed;
@@ -141,13 +142,23 @@ nav a:hover {
     height: 100vh;
     width: 40%;
     z-index: 999;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    transition: transform 400ms ease, opacity 400ms ease, visibility 400ms ease;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
 }
 
 .sidebar button {
@@ -160,14 +171,18 @@ nav a:hover {
     padding: 1rem;
     margin: 1rem;
 }
-.sidebar button:hover {
+
+@media (hover) {
+    .sidebar button:hover {
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(0.5px);
     -webkit-backdrop-filter: blur(0.5px);
-}
+    }
 
-.sidebar a:hover {
-    border-bottom: none;
+    .sidebar a:hover {
+        border-bottom: none;
+    }
+
 }
 
 .sidebar a {
@@ -282,11 +297,15 @@ nav a:hover {
     justify-content: center;
     border-radius: 50%;
     border: 2px solid transparent;
+    transition: border 200ms ease;
 }
 
-.social-icons li:hover {
-    border: 2px solid black;
+@media (hover) {
+    .social-icons li:hover {
+        border: 2px solid black;
+    }
 }
+
 
 .social-icons li a {
     display: flex;

@@ -5,13 +5,12 @@
     const sidebar = document.querySelector('.sidebar');
     
     function revealSidebar() {
-        sidebar.style.display = 'flex';
+        sidebar.classList.add('active');
     }
     
     function closeSidebar() {
-        sidebar.style.display = 'none';
+        sidebar.classList.remove('active');
     }
-
 
     const menuIcon = document.querySelector('#menu-icon');
     const menuIconSvg = document.querySelector('#menu-icon-svg');
