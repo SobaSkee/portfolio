@@ -29,4 +29,20 @@
 
 }
 
-
+// ABOUT RELATED
+{
+    const socialIcons = document.querySelectorAll('.social-icons li');
+    socialIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            if (icon.classList.contains('active')){
+                icon.classList.remove('active');
+            }
+            else {
+                socialIcons.forEach(i => i.classList.remove('active'));
+                // Add 'active' class to the clicked icon
+                icon.classList.add('active');
+            }
+            
+        });
+    });
+}

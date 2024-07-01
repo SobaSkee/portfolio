@@ -298,7 +298,11 @@ nav a:visited {
     justify-content: center;
     border-radius: 50%;
     border: 2px solid transparent;
-    transition: border 200ms ease;
+    transition: border 200ms ease, background-color 300ms ease;
+}
+
+.social-icons li.active {
+    background-color: #EC5D53;
 }
 
 @media (hover) {
