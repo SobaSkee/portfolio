@@ -805,6 +805,10 @@ nav a:hover {
 @media (min-width: 1400px) {
     :root {
         /* for slider */
+        --slide-img-height: 5rem;
+        --slide-img-width: 15rem;
+        --slide-height: 20rem;
+        --slide-width: 30rem;
     }
     
 }
