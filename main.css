@@ -30,7 +30,6 @@ darker pink ~ #EC5D53
     padding: 0;
     margin: 0;
     font-family: 'Satoshi', sans-serif;
-    font-size: var(--fs-reg);
 }
 
 html {
@@ -46,7 +45,8 @@ body {
 
 section {
     min-height: 100vh;
-    margin-bottom: 5rem;
+    margin-bottom: 0rem;
+    padding-bottom: 2rem;
 }
 
 /*#region NAV BAR*/
@@ -338,13 +338,14 @@ nav a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .container .image-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    padding: 0;
 } 
 
 .image-wrapper img {
@@ -354,9 +355,6 @@ nav a:visited {
 .container .text-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    border-top: 1px solid hsl(0deg 0% 0% / 0.38);
-
 }
 
 .text-wrapper h1 {
@@ -642,7 +640,10 @@ nav a:visited {
 /*#region CONTACTS PAGE*/
 .contact {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 10rem;
     /* border: 5px solid black; */
 }
 
@@ -751,7 +752,7 @@ nav a:visited {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-size: var(--fs-med);
+    font-size: var(--fs-reg);
     font-weight: 600;
     cursor: pointer;
 }
@@ -767,7 +768,28 @@ nav a:visited {
 
 /*#endregion CONTACTS PAGE*/
 
+/*#region FOOTER*/
 
+footer {
+    width: 100%;
+    height: 10rem;
+    scroll-snap-align: end;
+    display: flex;
+    justify-content: center;
+}
+
+footer .container {
+    width: 90%;
+    border-top: 1px solid black;
+    display: flex;
+    padding-top: 2rem;
+}
+
+footer .container p {
+    margin-left: auto;
+    /* font-size: var(--fs-body-heading); */
+}
+/*#endregion FOOTER*/
 
 /*#region MEDIA QUERIES*/
 
@@ -832,9 +854,16 @@ nav a:visited {
     /*#endregion NAV AND HOME QUERIES*/
 
     /*#region ABOUT QUERIES */
+
     .image-wrapper img {
         width: 25rem;
     }
+
+    .about .container {
+        align-items: flex-end;
+        padding: 2rem;
+    }
+
     /*#endregion ABOUT QUERIES */
 
     /*#region SKILLS QUERIES */
@@ -874,6 +903,7 @@ nav a:visited {
     .right-section .resume-container {
         align-items: flex-start;
     }
+
     /*#endregion CONTACTS QUERIES */
 }
 
@@ -900,7 +930,7 @@ nav a:visited {
         scroll-snap-align: start;
         scroll-snap-stop: always;
         padding-top: 8rem;
-        padding-bottom: 8rem;
+        padding-bottom: 10rem;
     }
 
     /*#region NAV AND HOME QUERIES */
@@ -935,7 +965,6 @@ nav a:visited {
     }
 
     .about .container .text-wrapper {
-        border-left: 1px solid hsl(0deg 0% 0% / 0.38);
         border-top: none;
     }
 
@@ -991,7 +1020,7 @@ nav a:visited {
     }
 
     .image-wrapper img {
-        width: 28rem;
+        width: 30rem;
     }
     /*#endregion NAV AND HOME QUERIES */
     

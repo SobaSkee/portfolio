@@ -16,19 +16,19 @@
         <ul class="sidebar">
             <button onclick="closeSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
             
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Projects</a></li>
-            <li id="contact-button"><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li id="contact-button"><a href="#contact">Contact</a></li>
         </ul>
         <ul>
-            <li id="logo"><a href="">SK Porfolio.</a></li>
-            <li class="page-buttons"><a href="#">Home</a></li>
-            <li class="page-buttons"><a href="#">About Me</a></li>
-            <li class="page-buttons"><a href="#">Skills</a></li>
-            <li class="page-buttons"><a class="page-buttons" href="#">Projects</a></li>
-            <button class="page-buttons" id="contact-button"><a href="#">Contact</a></button>
+            <li id="logo"><a href="">SK Portfolio</a></li>
+            <li class="page-buttons"><a href="#home">Home</a></li>
+            <li class="page-buttons"><a href="#about">About Me</a></li>
+            <li class="page-buttons"><a href="#skills">Skills</a></li>
+            <li class="page-buttons"><a class="page-buttons" href="#projects">Projects</a></li>
+            <button class="page-buttons" id="contact-button"><a href="#contact">Contact</a></button>
             <li id="menu-icon" onclick="revealSidebar()"><a><svg  id="menu-icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
         
@@ -38,7 +38,7 @@
     <!-- start sections -->
     <div class="sections">
         <!-- section 1: home -->
-        <section class="home">
+        <section class="home" id="home">
             <div id="top-line">
                 <p>Hey there!</p>
                 <picture>
@@ -66,7 +66,7 @@
             </div>
         </section>
         <!-- section 2: about -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="image-wrapper">
                     <img src="./assets/images/Boats.JPG" alt="">
@@ -84,7 +84,7 @@
             </div>
         </section>
         <!--section 3: skills-->
-        <section class="skills">
+        <section class="skills" id="skills">
             <div class="container">
                 <h1>Skills</h1>
                 <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat veniam voluptas maxime impedit, officiis vitae, ratione magnam accusamus a dignissimos quas dicta. Quaerat velit sequi ipsa quisquam nobis exercitationem itaque.</p> -->
@@ -197,7 +197,7 @@
             </div>
         </section>
         <!--section 4: projects-->
-        <section class="projects">
+        <section class="projects" id="projects">
             <h1>Projects</h1>
             <div class="container">
                 <div class="card card-1">
@@ -308,7 +308,7 @@
             </div>
         </section>
         <!--section 5: contacts-->
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact-container">
                 <div class="left-section">
                     <h1>Let’s Talk</h1>
@@ -341,12 +341,15 @@
                     </div>
                 </div>
             </div>
+            <a href="#home"><img src="./assets/icons/up-icon.svg" alt="up icon"></a>
         </section>
-        <!--section 6: footer-->
-        <section></section>
     </div>
     <!-- end sections -->
-    
+    <footer>
+        <div class="container">
+            <p>© 2024 SK</p>
+        </div>
+    </footer>
 </body>
 <script src="main.js"></script>
 </html>
