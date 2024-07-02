@@ -1,7 +1,4 @@
- /* colors
-light pink ~ #F5A59B
-darker pink ~ #EC5D53 
-*/
+/*#region DEFAULTS*/
 :root {
     /* default mobile sizing*/
     --ff-body: 'Satoshi', sans-serif;
@@ -48,6 +45,7 @@ section {
     margin-bottom: 0rem;
     padding-bottom: 2rem;
 }
+/*#endregion DEFAULTS*/
 
 /*#region NAV BAR*/
 
@@ -644,7 +642,6 @@ nav a:visited {
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    /* border: 5px solid black; */
 }
 
 .contact .contact-container {
@@ -787,7 +784,6 @@ footer .container {
 
 footer .container p {
     margin-left: auto;
-    /* font-size: var(--fs-body-heading); */
 }
 /*#endregion FOOTER*/
 
