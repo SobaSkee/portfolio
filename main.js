@@ -15,10 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const menuIcon = document.querySelector('#menu-icon');
         const menuIconSvg = document.querySelector('#menu-icon-svg');
+        const downloadButton = document.querySelector('#download-button');
+        const downloadSvgPath1 = downloadButton.querySelector('#Vector');
+        const downloadSvgPath2 = downloadButton.querySelector('#Vector_2');
         menuIcon.addEventListener("mouseover", ()=> {
             console.log('hovering');
             menuIcon.classList.add('hovering');
-            menuIconSvg.setAttribute('fill', "#EC5D53");
+            menuIconSvg.setAttribute('fill', "#EB867F");
 
         });
 
@@ -26,6 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('not hovering');
             menuIcon.classList.remove('hovering');
             menuIconSvg.setAttribute('fill', "black");
+        });
+
+        downloadButton.addEventListener("mouseover", ()=> {
+            console.log('hovering');
+            downloadButton.classList.add('hovering');
+            downloadSvgPath1.setAttribute('stroke', "#EB867F");
+            downloadSvgPath2.setAttribute('stroke', "#EB867F");
+
+        });
+
+        downloadButton.addEventListener("mouseout", ()=> {
+            console.log('not hovering');
+            downloadButton.classList.remove('hovering');
+            downloadSvgPath1.setAttribute('stroke', "white");
+            downloadSvgPath2.setAttribute('stroke', "white");
         });
 
     }

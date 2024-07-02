@@ -194,19 +194,10 @@ nav a:visited {
 /*#region HOME PAGE*/
 
 .home {
-    /* padding-top: 2rem; */
-    /* border: 2px solid black; */
-    /* margin-top: 20rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.home .title {
-    font-family: "Inter", sans-serif;
-    font-size: var(--fs-heading);
-    font-weight: 800;
 }
 
 #top-line {
@@ -214,6 +205,7 @@ nav a:visited {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 #top-line p {
@@ -223,6 +215,17 @@ nav a:visited {
     font-size: var(--fs-sub-heading);
     font-weight: 800;
     margin-right: 1rem;
+    animation: entranceSlide 1500ms ease;
+}
+
+@keyframes entranceSlide {
+    from {
+        transform: translateY(10rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 #top-line picture {
@@ -241,10 +244,45 @@ nav a:visited {
     overflow: hidden;
 }
 
-#top-line img {
+#soba-img {
     position: relative;
     max-width: 130%;
+    /* transform: translateX(6rem); */
+    animation: moveLeft 1500ms ease;
 }
+
+#soba-img:hover {
+    /* animation: wiggle 500ms linear; */
+    transform: rotate(15deg);
+}
+
+@keyframes moveLeft {
+	0% { transform: translateX(6rem); }
+    100% { transform: translateX(0);}
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotate(20deg);
+    }
+    
+    to {
+        transform: rotate(0);
+    }
+}
+
+#middle-line {
+    overflow: hidden;
+}
+
+#middle-line .title {
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-heading);
+    font-weight: 800;
+    animation: entranceSlide 1500ms ease;
+}
+
+
 
 .name-imgs {
     width: 100%;
@@ -300,9 +338,9 @@ nav a:visited {
     transition: border 200ms ease, background-color 300ms ease;
 }
 
-.social-icons li.active {
+/* .social-icons li.active {
     background-color: #EC5D53;
-}
+} */
 
 @media (hover) {
     .social-icons li:hover {
@@ -331,6 +369,10 @@ nav a:visited {
     width: 100%;
 }
 
+.about h1 {
+    font-size: var(--fs-body-heading);
+}
+
 .about .container {
     width: 90%;
     display: flex;
@@ -353,12 +395,6 @@ nav a:visited {
 .container .text-wrapper {
     display: flex;
     flex-direction: column;
-}
-
-.text-wrapper h1 {
-    font-size: var(--fs-body-heading);
-    margin-bottom: 1rem;
-    align-self: center;
 }
 
 .text-wrapper p {
@@ -655,9 +691,15 @@ nav a:visited {
 
 .contact-container .left-section {
     display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.contact-container .left-section form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
     padding: 2rem;
     gap: 1rem;
 }
@@ -689,6 +731,11 @@ nav a:visited {
     opacity: 0.5;
 }
 
+.left-section input:focus {
+    border-color: #EC5D53;
+    outline: 1px solid #EC5D53;
+}
+
 .left-section .email-form {
     display: flex;
     flex-direction: column;
@@ -703,17 +750,33 @@ nav a:visited {
     padding: 1rem;
 }
 
+.email-form textarea:focus {
+    border-color: #EC5D53;
+    outline: 1px solid #EC5D53;
+}
 
-.email-form button{
+
+.email-form button {
     font-size: var(--fs-med);
     font-weight: 600;
-    color: #EB867F;
+    color: white;
     background-color: black;
     border: 1px solid black;
     border-radius: 0.5rem;
     cursor: pointer;
     padding: 1.2rem;
+    transition: color 200ms ease;
 }
+@media (hover) {
+    .email-form button:hover {
+        color: #EB867F;
+    }
+
+    .resume-container a:hover {
+        color: #EB867F;
+    }
+}
+
 
 .contact-container .right-section {
     width: 100%;
@@ -726,7 +789,7 @@ nav a:visited {
 }
 
 .right-section .resume-container {
-    width: 60%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -737,14 +800,16 @@ nav a:visited {
     font-size: var(--fs-body-sub-heading);
 }
 
-.resume-container button {
+
+.resume-container a {
+    text-decoration: none;
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 4rem;
     background-color: black;
     border: 1px solid black;
     border-radius: 0.5rem;
-    color: #EB867F;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -752,9 +817,10 @@ nav a:visited {
     font-size: var(--fs-reg);
     font-weight: 600;
     cursor: pointer;
+    transition: color 200ms ease;
 }
 
-.right-section button img {
+.right-section a img {
     width: 2rem;
 }
 
@@ -856,9 +922,11 @@ footer .container p {
     }
 
     .about .container {
-        align-items: flex-end;
+        /* align-items: flex-end; */
         padding: 2rem;
     }
+
+    /* .container .text-wrapper {} */
 
     /*#endregion ABOUT QUERIES */
 
@@ -962,10 +1030,6 @@ footer .container p {
 
     .about .container .text-wrapper {
         border-top: none;
-    }
-
-    .text-wrapper h1 {
-        font-size: var(--fs-body-heading);
     }
     
     .text-wrapper p {

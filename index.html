@@ -43,11 +43,13 @@
                 <p>Hey there!</p>
                 <picture>
                     <div>
-                        <img src="./assets/images/SobaSkee.png" alt="Soba Icon">
+                        <img id="soba-img" src="./assets/images/SobaSkee.png" alt="Soba Icon">
                     </div>
                 </picture>
             </div>
-            <p class="title">I’m Stanley.</p>
+            <div id="middle-line">
+                <p class="title">I’m Stanley.</p>
+            </div>
             <div class="name-imgs">
                 <div class="lottie-animation1-container">
                     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
@@ -58,21 +60,21 @@
             <div class="social-icons">
                 <ul>
                     <li class="icon"><a href="https://github.com/SobaSkee" target="_blank"><img src="./assets/icons/github-icon.svg" alt="Icon"></a></li>
-                    <li class="icon"><a href="www.linkedin.com/in/stanley-ke" target="_blank"><img src="./assets/icons/linkedin-icon.svg" alt="Icon"></a></li>
-                    <li class="icon"><a href="" target="_blank"><img src="./assets/icons/discord-icon.svg" alt="Icon"></a></li>
-                    <li class="icon"><a href="" target="_blank"><img src="./assets/icons/instagram-icon.svg" alt="Icon"></a></li>
+                    <li class="icon"><a href="https://linkedin.com/in/stanley-ke/" target="_blank"><img src="./assets/icons/linkedin-icon.svg" alt="Icon"></a></li>
+                    <li class="icon"><a href="https://discord.com/users/353589602935635969" target="_blank"><img src="./assets/icons/discord-icon.svg" alt="Icon"></a></li>
+                    <li class="icon"><a href="https://www.instagram.com/SobaSke/" target="_blank"><img src="./assets/icons/instagram-icon.svg" alt="Icon"></a></li>
                 </ul>  
             </div>
         </section>
         <!-- section 2: about -->
         <section class="about" id="about">
+            <h1>About Me</h1>
             <div class="container">
                 <div class="image-wrapper">
                     <img src="./assets/images/Boats.JPG" alt="">
                 </div>
                 
                 <div class="text-wrapper">
-                    <h1>About Me</h1>
                     <p>Hello! I'm a second-year computer science student at the University of Florida with a passion for <span>front-end web development</span> and creating new things.</p>
                     <p>While my current goal is to secure a swe internship, I'm learning to enjoy the journey. As Yoshihiro Togashi, one of my favorite manga authors, once said:</p>
                     <blockquote>
@@ -86,7 +88,6 @@
         <section class="skills" id="skills">
             <div class="container">
                 <h1>Skills</h1>
-                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat veniam voluptas maxime impedit, officiis vitae, ratione magnam accusamus a dignissimos quas dicta. Quaerat velit sequi ipsa quisquam nobis exercitationem itaque.</p> -->
                 <h2>Development Tools</h2>
                 <div class="slider">
                     <div class="slide-track" id="left-slide-track">
@@ -310,32 +311,42 @@
         <section class="contact" id="contact">
             <div class="contact-container">
                 <div class="left-section">
-                    <h1>Let’s Talk</h1>
-                    <div class="name-form">
-                        <input type="text" name="first" placeholder="First name" autocomplete="off" required>
-                        <input type="text" name="last" placeholder="Last name" autocomplete="off" required>
-                    </div>
-                    <div class="email-form">
-                        <input type="email" name="email" placeholder="hxh@email.com" autocomplete="off" required>
-                        <textarea name="message" id="" cols="60" rows="5" placeholder="Enter your question or message" autocomplete="off" required></textarea>
-                        <button type="submit">Send email</button>
-                    </div>
+                    <form action="https://api.web3forms.com/submit" method="post">
+                        <input type="hidden" name="access_key" value="3764e507-7d2b-4e4a-9398-08b31f19b004">
+
+                        <h1>Let’s Talk</h1>
+                        <div class="name-form">
+                            <input type="text" name="first" placeholder="First name" autocomplete="off" required>
+                            <input type="text" name="last" placeholder="Last name" autocomplete="off" required>
+                        </div>
+                        <div class="email-form">
+                            <input type="email" name="email" placeholder="hxh@email.com" autocomplete="off" required>
+                            <textarea name="message" id="" cols="60" rows="5" placeholder="Enter your question or message" autocomplete="off" required></textarea>
+                            <button type="submit">Send email</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="right-section">
                     <div class="resume-container">
                         <h2>My Resume</h2>
-                        <button>
+                        <a id="download-button" href="./assets/Stanley_Ke_Resume.pdf" download="Stanley_Ke_Resume.pdf">
                             <p>Download</p>
-                            <img src="./assets/icons/download-icon.svg" alt="download icon">
-                        </button>
+                            <svg id="download-svg" width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="download-04">
+                                <path id="Vector" d="M12.5002 15.6042V5.1875M12.5002 15.6042C11.7708 15.6042 10.408 13.5268 9.896 13M12.5002 15.6042C13.2295 15.6042 14.5924 13.5268 15.1043 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path id="Vector_2" d="M20.8332 17.6875C20.8332 20.2729 20.2936 20.8125 17.7082 20.8125H7.2915C4.70609 20.8125 4.1665 20.2729 4.1665 17.6875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                            </svg>
+                        </a>
+                        
                     </div>
                     <h2>Connect with me here</h2>
                     <div class="social-icons">
                         <ul>
-                            <li class="icon"><a><img src="./assets/icons/github-icon.svg" alt="Icon"></a></li>
-                            <li class="icon"><a><img src="./assets/icons/linkedin-icon.svg" alt="Icon"></a></li>
-                            <li class="icon"><a><img src="./assets/icons/discord-icon.svg" alt="Icon"></a></li>
-                            <li class="icon"><a><img src="./assets/icons/instagram-icon.svg" alt="Icon"></a></li>
+                            <li class="icon"><a href="https://github.com/SobaSkee" target="_blank"><img src="./assets/icons/github-icon.svg" alt="Icon"></a></li>
+                            <li class="icon"><a href="https://linkedin.com/in/stanley-ke/" target="_blank"><img src="./assets/icons/linkedin-icon.svg" alt="Icon"></a></li>
+                            <li class="icon"><a href="https://discord.com/users/353589602935635969" target="_blank"><img src="./assets/icons/discord-icon.svg" alt="Icon"></a></li>
+                            <li class="icon"><a href="https://www.instagram.com/SobaSke/" target="_blank"><img src="./assets/icons/instagram-icon.svg" alt="Icon"></a></li>
                         </ul>  
                     </div>
                 </div>
