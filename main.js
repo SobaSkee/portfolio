@@ -1,16 +1,17 @@
 
+const sidebar = document.querySelector('.sidebar');
+        
+function revealSidebar() {
+    sidebar.classList.add('active');
+}
+
+function closeSidebar() {
+    sidebar.classList.remove('active');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // NAVBAR RELATED
     {
-        const sidebar = document.querySelector('.sidebar');
-        
-        function revealSidebar() {
-            sidebar.classList.add('active');
-        }
-        
-        function closeSidebar() {
-            sidebar.classList.remove('active');
-        }
 
         const menuIcon = document.querySelector('#menu-icon');
         const menuIconSvg = document.querySelector('#menu-icon-svg');

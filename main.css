@@ -41,12 +41,12 @@ html {
 
 body {
     background-color: #F5A59B;
-    
     height: 200vh;
 }
 
 section {
     min-height: 100vh;
+    margin-bottom: 5rem;
 }
 
 /*#region NAV BAR*/
@@ -379,6 +379,10 @@ nav a:visited {
     text-align: center;
 }
 
+.text-wrapper blockquote p em {
+    font-size: var(--fs-med);
+}
+
 .text-wrapper blockquote p::before {
     content: '\201C';
     color: rgba(254, 105, 105, 0.6);
@@ -393,6 +397,7 @@ nav a:visited {
 
 
 .text-wrapper span {
+    font-size: var(--fs-med);
     font-weight: 600;
     background: linear-gradient(90deg, rgb(114, 114, 202), rgb(250, 3, 44));
     background-clip: text;
@@ -490,8 +495,6 @@ nav a:visited {
     margin-bottom: 1rem;
 }
 
-
-
 @keyframes autoScrollLeft {
 	0% { transform: translateX(0); }
     100% { transform: translateX(calc(var(--slide-width)*-6));}
@@ -505,28 +508,21 @@ nav a:visited {
 /*#endregion SKILLS PAGE*/
 
 /*#region PROJECTS PAGE*/
-.projects-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.projects-title h1 {
-    font-size: var(--fs-body-heading);
-}
-
 .projects {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 10rem;
+    gap: 5rem;
+}
+
+.projects h1 {
+    font-size: var(--fs-body-heading);
 }
 
 .projects .container {
     width: 75vw;
     display: grid;
-    /* align-items: center; */
     gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
@@ -596,7 +592,6 @@ nav a:visited {
 .card-content .tools {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-wrap: wrap;
     padding: 1rem 0 1rem 0;
     gap: 0.3rem;
@@ -642,32 +637,29 @@ nav a:visited {
     width: 2rem;
     /* margin-left: 1rem; */
 }
-
-
-
-
-
 /*#endregion PROJECTS PAGE*/
 
 /*#region CONTACTS PAGE*/
 .contact {
     display: flex;
     justify-content: center;
+    /* border: 5px solid black; */
 }
 
 .contact .contact-container {
-    height: 70vh;
-    width: 70vw;
+    height: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     /* gap: 2rem; */
 }
 
 .contact-container .left-section {
-    width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
+    align-items: center;
     padding: 2rem;
     gap: 1rem;
 }
@@ -679,9 +671,10 @@ nav a:visited {
 
 .left-section .name-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .left-section input {
@@ -712,37 +705,43 @@ nav a:visited {
     padding: 1rem;
 }
 
-.email-form button {
-    padding: 1.2rem;
-}
 
 .email-form button{
-    font-size: var(--fs-lg);
+    font-size: var(--fs-med);
     font-weight: 600;
     color: #EB867F;
     background-color: black;
     border: 1px solid black;
     border-radius: 0.5rem;
     cursor: pointer;
+    padding: 1.2rem;
 }
 
 .contact-container .right-section {
-    border: 2px solid black;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    /* align-items: center; */
-    margin-top: auto;
-    padding: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.right-section .resume-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .right-section h2 {
     font-size: var(--fs-body-sub-heading);
 }
 
-.right-section button {
-    padding: 1rem;
+.resume-container button {
+    width: 100%;
+    padding: 0.5rem;
     margin-bottom: 4rem;
     background-color: black;
     border: 1px solid black;
@@ -759,10 +758,6 @@ nav a:visited {
 
 .right-section button img {
     width: 2rem;
-}
-
-.right-section .social-icons {
-    justify-content: flex-start;
 }
 
 .right-section .social-icons li a img {
@@ -851,6 +846,35 @@ nav a:visited {
         transform: scale(1.1);
     }
     /*#endregion SKILLS QUERIES */
+
+    /*#region CONTACT QUERIES */
+    .contact .contact-container {
+        flex-direction: row;
+        width: 80vw;
+        height: 70vh;
+    }
+
+    .contact-container .left-section {
+        width: 60%;
+        align-items: flex-start;
+    }
+
+    .left-section .name-form {
+        flex-direction: row;
+    }
+
+    .contact-container .right-section {
+        align-items: flex-start;
+    }
+
+    .right-section .social-icons {
+        justify-content: flex-start;
+    }
+
+    .right-section .resume-container {
+        align-items: flex-start;
+    }
+    /*#endregion CONTACTS QUERIES */
 }
 
 /* MEDIUM SIZED SCREEN */
