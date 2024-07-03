@@ -849,8 +849,6 @@ form .email-form {
     gap: 1rem;
     align-items: center;
     padding: 2rem;
-    z-index: 100;
-    background-color: #F5A59B;
     overflow: hidden;
 }
 
