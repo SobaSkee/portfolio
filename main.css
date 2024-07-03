@@ -728,23 +728,14 @@ body.no-scroll {
     min-height: 100vh;
 }
 
-.contact .contact-container {
-    /* border: 2px solid black; */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* gap: 2rem; */
-}
-
 .contact-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    gap: 2rem
 }
 
 .contact-container form {
@@ -772,11 +763,11 @@ form .name-form {
 }
 
 form .name-form label {
-    /* display: none; */
+    width: 100%;
 }
 
 
-form input {
+form label input {
     flex: 1;
     padding: 0.8rem 1rem;
     border-radius: 0.5rem;
@@ -788,12 +779,12 @@ form input {
     width: 100%;
 }
 
-form input::placeholder {
+form label input::placeholder {
     color: black;
     opacity: 0.5;
 }
 
-form input:focus {
+form label input:focus {
     border-color: #EC5D53;
     outline: 1px solid #EC5D53;
 }
@@ -806,11 +797,12 @@ form .email-form {
 }
 
 .email-form label {
-    /* display: none; */
+    width: 100%;
 }
 
-.email-form textarea {
+.email-form label textarea {
     position: relative;
+    width: 100%;
     z-index: 1;
     border-radius: 0.5rem;
     border: 1px solid black;
@@ -818,12 +810,12 @@ form .email-form {
     padding: 1rem;
 }
 
-.email-form textarea::placeholder {
+.email-form label textarea::placeholder {
     color: black;
     opacity: 0.5;
 }
 
-.email-form textarea:focus {
+.email-form label textarea:focus {
     border-color: #EC5D53;
     outline: 1px solid #EC5D53;
 }
@@ -860,6 +852,9 @@ form .email-form {
     gap: 1rem;
     align-items: center;
     padding: 2rem;
+    z-index: 100;
+    background-color: #F5A59B;
+    overflow: hidden;
 }
 
 
