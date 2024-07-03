@@ -200,15 +200,17 @@ body.no-scroll {
     opacity: 1;
 }
 
-.sidebar button {
+#close-button {
     width: 85%;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: transparent;
     border: none;
     border-radius: 0.2rem;
     padding: 1rem;
     margin: 1rem;
+    gap: 1rem;
 }
 
 @media (hover) {
@@ -748,7 +750,7 @@ body.no-scroll {
     gap: 1rem;
 }
 
-form h1{
+form h1 {
     font-size: var(--fs-body-heading);
     margin-bottom: 1rem;
 }
@@ -764,8 +766,10 @@ form .name-form {
 
 form .name-form label {
     width: 100%;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
-
 
 form label input {
     flex: 1;
@@ -798,6 +802,9 @@ form .email-form {
 
 .email-form label {
     width: 100%;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .email-form label textarea {

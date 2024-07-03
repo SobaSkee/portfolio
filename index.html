@@ -15,7 +15,7 @@
     <nav>
         <div class="overlay"></div>
         <ul class="sidebar">
-            <button onclick="closeSidebar()">Close<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+            <button id="close-button" onclick="closeSidebar()"><p>Close</p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
             
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
@@ -302,17 +302,17 @@
                     <div class="name-form">
                         <label for="first-name">
                             <p>First name</p>
-                            <input type="text" id="first-name" name="first" placeholder="First name" autocomplete="off" required>
+                            <input type="text" id="first-name" name="first" placeholder="Somebody" autocomplete="off" required>
                         </label>
                         <label for="last-name">
                             <p>Last name</p>
-                            <input type="text" id="last-name" name="last" placeholder="Last name" autocomplete="off" required>
+                            <input type="text" id="last-name" name="last" placeholder="Cool" autocomplete="off" required>
                         </label>
                     </div>
                     <div class="email-form">
                         <label for="email">
                             <p>Email</p>
-                            <input type="email" id="email" name="email" placeholder="hxh@email.com" autocomplete="off" required>
+                            <input type="email" id="email" name="email" placeholder="something@email.com" autocomplete="off" required>
                         </label>
                         <label for="message">
                             <p>Message</p>
