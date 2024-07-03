@@ -1,13 +1,19 @@
 
 const sidebar = document.querySelector('.sidebar');
-        
+const overlay = document.querySelector('.overlay');        
 function revealSidebar() {
+    overlay.classList.add('active');
     sidebar.classList.add('active');
+    document.body.classList.add('no-scroll');
 }
 
 function closeSidebar() {
+    overlay.classList.remove('active');
     sidebar.classList.remove('active');
+    document.body.classList.remove('no-scroll');
 }
+
+overlay.addEventListener('click', closeSidebar);
 
 document.addEventListener('DOMContentLoaded', () => {
     // NAVBAR RELATED
@@ -18,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const downloadButton = document.querySelector('#download-button');
         const downloadSvgPath1 = downloadButton.querySelector('#Vector');
         const downloadSvgPath2 = downloadButton.querySelector('#Vector_2');
+
         menuIcon.addEventListener("mouseover", ()=> {
             console.log('hovering');
             menuIcon.classList.add('hovering');
@@ -65,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
  });
 
 
@@ -84,3 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
  const hiddenElements = document.querySelectorAll('.hidden');
  hiddenElements.forEach((el) => observer.observe(el));
 
+function resetPage() {
+    window.scrollTo(0, 0);
+}
+
+ window.onload = resetPage();

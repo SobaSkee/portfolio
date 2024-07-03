@@ -155,6 +155,24 @@ nav a:visited {
     }
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
+.overlay {
+    display: none;
+    width: 60vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 999;
+    /* background-color: white; */
+}
+
+.overlay.active {
+    display: block;
+}
 
 .sidebar {
     position: fixed;
@@ -706,15 +724,16 @@ nav a:visited {
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    width: 100vw;
+
 }
 
 .contact .contact-container {
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     /* gap: 2rem; */
 }
 
@@ -728,6 +747,7 @@ nav a:visited {
 .contact-container .left-section form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     /* align-items: center; */
     padding: 2rem;
     gap: 1rem;
@@ -742,17 +762,20 @@ nav a:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     gap: 1rem;
 }
 
 .left-section input {
     flex: 1;
-    padding: 0.8rem 0 0.8rem 1rem;
+    padding: 0.8rem 1rem;
     border-radius: 0.5rem;
     border: 1px solid black;
     background-color: #EB867F;
-    
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    width: 100%;
 }
 
 .left-section input::placeholder {
@@ -768,15 +791,22 @@ nav a:visited {
 .left-section .email-form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     gap: 1rem;
 }
 
 .email-form textarea {
+    position: relative;
+    z-index: 1;
     border-radius: 0.5rem;
     border: 1px solid black;
     background-color: #EB867F;
     padding: 1rem;
+}
+
+.email-form textarea::placeholder {
+    color: black;
+    opacity: 0.5;
 }
 
 .email-form textarea:focus {
@@ -1027,6 +1057,10 @@ footer .container p {
     }
 
     /*#region NAV AND HOME QUERIES */
+    .sidebar {
+        display: none;
+    }
+
     nav {
         background-color: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(15px);
