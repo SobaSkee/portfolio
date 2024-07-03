@@ -15,7 +15,7 @@
     <nav>
         <div class="overlay"></div>
         <ul class="sidebar">
-            <button onclick="closeSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+            <button onclick="closeSidebar()">Close<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
             
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
@@ -24,7 +24,7 @@
             <li id="contact-button"><a href="#contact">Contact</a></li>
         </ul>
         <ul>
-            <li id="logo"><a href="">SK Portfolio</a></li>
+            <li id="logo"><a href="#home">SK Portfolio</a></li>
             <li class="page-buttons"><a href="#home">Home</a></li>
             <li class="page-buttons"><a href="#about">About Me</a></li>
             <li class="page-buttons"><a href="#skills">Skills</a></li>
@@ -301,17 +301,21 @@
                     <h1>Let’s Talk</h1>
                     <div class="name-form">
                         <label for="first-name">
+                            <p>First name</p>
                             <input type="text" id="first-name" name="first" placeholder="First name" autocomplete="off" required>
                         </label>
                         <label for="last-name">
+                            <p>Last name</p>
                             <input type="text" id="last-name" name="last" placeholder="Last name" autocomplete="off" required>
                         </label>
                     </div>
                     <div class="email-form">
                         <label for="email">
+                            <p>Email</p>
                             <input type="email" id="email" name="email" placeholder="hxh@email.com" autocomplete="off" required>
                         </label>
                         <label for="message">
+                            <p>Message</p>
                             <textarea name="message" id="message" cols="60" rows="5" placeholder="Enter your question or message" autocomplete="off" required></textarea>
                         </label>
                         <button type="submit">Send email</button>
