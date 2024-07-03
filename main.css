@@ -706,6 +706,8 @@ nav a:visited {
     justify-content: center;
     align-items: center;
     gap: 10rem;
+    border: 2px solid black;
+    width: 100vw;
 }
 
 .contact .contact-container {
