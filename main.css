@@ -775,6 +775,10 @@ form .name-form label {
     flex-direction: column;
 }
 
+.name-form label p {
+    margin-left: 0.5rem;
+}
+
 form label input {
     flex: 1;
     padding: 0.8rem 1rem;
@@ -802,6 +806,10 @@ form .email-form {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
+}
+
+.email-form label p {
+    margin-left: 0.5rem;
 }
 
 .email-form label {
