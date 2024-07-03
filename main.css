@@ -247,7 +247,7 @@ body.no-scroll {
     overflow: hidden;
 }
 
-#top-line p {
+#top-line h1 {
     flex: 0 1 auto;
     order: 2;
     font-family: "Inter", sans-serif;
@@ -739,7 +739,7 @@ body.no-scroll {
     /* gap: 2rem; */
 }
 
-.contact-container form {
+.contact-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -753,7 +753,7 @@ body.no-scroll {
     flex-direction: column;
     align-items: center;
     /* align-items: center; */
-    padding: 2rem;
+    /* padding: 2rem; */
     gap: 1rem;
 }
 
@@ -768,7 +768,11 @@ form .name-form {
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+form .name-form label {
+    display: none;
 }
 
 
@@ -799,6 +803,10 @@ form .email-form {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
+}
+
+.email-form label {
+    display: none;
 }
 
 .email-form textarea {
@@ -953,7 +961,7 @@ footer .container p {
         height: 6rem;
     }
 
-    #top-line p {
+    #top-line h1 {
         order: 1;
     }
     
