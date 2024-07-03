@@ -18,7 +18,6 @@ overlay.addEventListener('click', closeSidebar);
 document.addEventListener('DOMContentLoaded', () => {
     // NAVBAR RELATED
     {
-
         const menuIcon = document.querySelector('#menu-icon');
         const menuIconSvg = document.querySelector('#menu-icon-svg');
         const downloadButton = document.querySelector('#download-button');
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
             downloadSvgPath1.setAttribute('stroke', "white");
             downloadSvgPath2.setAttribute('stroke', "white");
         });
-
     }
 
     // HOMEPAGE RELATED
@@ -68,11 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Add 'active' class to the clicked icon
                     icon.classList.add('active');
                 }
-                
             });
         });
     }
-
  });
 
 
