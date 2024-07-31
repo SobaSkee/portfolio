@@ -16,9 +16,9 @@ and connect with me at: https://www.linkedin.com/in/stanley-ke/
 
 This project is built by me :>.
 
-## Working URL
+## Working URL 🌐
 
 https://sobaskee.github.io/portfolio
 
-## Thank you for viewing!
+## Thank you for viewing! 👋
 
