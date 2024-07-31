@@ -6,7 +6,7 @@ https://sobaskee.github.io/portfolio
 
 ## Description
 
-Hi there! This is the repository for my personal portfolio website that I will be making changes to often. Currently, it is buit with just HTML, CSS, and vanilla JS. I hope to rebuild this website with JS libraries such as React in the future. <br> <br> This website's purpose is to showcase information about me such as my education, (future) work experience, and projects I have worked on. It is meant to be easily accessible to all users. It has been tested with the Website Accessibility Evalulation Tool (WAVE) to make sure it is compliant to individuals with disabilities.
+Hi there! This is the repository for my personal portfolio website that I will be making changes to often. Currently, it is buit with just HTML, CSS, and vanilla JS. I hope to rebuild this website with JS libraries such as React in the future. <br> <br> This website's purpose is to showcase information about me such as my education, (future) work experience, and projects I have worked on. It has been tested with the Website Accessibility Evalulation Tool (WAVE) to make sure it is easily accessible to individuals with disabilities.
 
 ## Author
 
