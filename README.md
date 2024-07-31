@@ -8,7 +8,7 @@ This website's purpose is to showcase information about me such as my education,
 
 ## Author
 
-Stanley Ke
+Stanley Ke <br>
 Feel free to contact me at: kestanley101@gmail.com <br>
 Connect with me at: https://www.linkedin.com/in/stanley-ke/
 
