@@ -1,377 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stanley's Portfolio</title>
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_package_v0.16/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_package_v0.16/favicon.ico">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#00000">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon_package_v0.16/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon_package_v0.16/favicon.ico"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#00000" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,401,700,1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-7LBRK8M8XS"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <link rel="stylesheet" href="main.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,401,700,1&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-</head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LBRK8M8XS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7LBRK8M8XS');
-</script>
-
-<body>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-7LBRK8M8XS");
+  </script>
+  <body>
     <!-- nav -->
     <nav>
-        <div class="overlay"></div>
-        <ul class="sidebar">
-            <button id="close-button" onclick="closeSidebar()"><p>Close</p><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
-            
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li id="contact-button"><a href="#contact">Contact</a></li>
-        </ul>
-        <ul>
-            <li id="logo">SK Portfolio</li>
-            <li class="page-buttons"><a href="#home">Home</a></li>
-            <li class="page-buttons"><a href="#about">About Me</a></li>
-            <li class="page-buttons"><a href="#skills">Skills</a></li>
-            <li class="page-buttons"><a class="page-buttons" href="#projects">Projects</a></li>
-            <button class="page-buttons" id="contact-button"><a href="#contact">Contact</a></button>
-            <li id="menu-icon" onclick="revealSidebar()"><a><svg  id="menu-icon-svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-        </ul>
-        
+      <div class="overlay"></div>
+      <ul class="sidebar">
+        <button id="close-button" onclick="closeSidebar()">
+          <p>Close</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="black"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </button>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About Me</a>
+        </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li id="contact-button">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <ul>
+        <li id="logo">SK Portfolio</li>
+        <li class="page-buttons">
+          <a href="#home">Home</a>
+        </li>
+        <li class="page-buttons">
+          <a href="#about">About Me</a>
+        </li>
+        <li class="page-buttons">
+          <a href="#skills">Skills</a>
+        </li>
+        <li class="page-buttons">
+          <a class="page-buttons" href="#projects">Projects</a>
+        </li>
+        <button class="page-buttons" id="contact-button">
+          <a href="#contact">Contact</a>
+        </button>
+        <li id="menu-icon" onclick="revealSidebar()">
+          <a>
+            <svg
+              id="menu-icon-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="black"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
     </nav>
     <!-- end nav -->
-    
     <!-- start sections -->
     <div class="sections">
-        <!-- section 1: home -->
-        <section class="home hidden" id="home">
-            <div id="top-line">
-                <h1>Hey there!</h1>
-                <picture>
-                    <div>
-                        <img id="soba-img" src="./assets/images/SobaSkee.png" alt="Soba Icon">
-                    </div>
-                </picture>
+      <!-- section 1: home -->
+      <section class="home hidden" id="home">
+        <div id="top-line">
+          <h1>Hey there!</h1>
+          <picture>
+            <div>
+              <img
+                id="soba-img"
+                src="./assets/images/SobaSkee.png"
+                alt="Soba Icon"
+              />
             </div>
-            <div id="middle-line">
-                <h1 class="title">I’m Stanley.</h1>
+          </picture>
+        </div>
+        <div id="middle-line">
+          <h1 class="title">I’m Stanley.</h1>
+        </div>
+        <div class="name-imgs">
+          <div class="lottie-animation1-container">
+            <script
+              src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+              type="module"
+            ></script>
+            <dotlottie-player
+              id="lottie-animation1"
+              src="https://lottie.host/f9d710b4-05f6-414b-b27b-606d57e92271/1NXFujYP0g.json"
+              background="transparent"
+              speed="1"
+              direction="1"
+              playMode="normal"
+              autoplay
+            ></dotlottie-player>
+          </div>
+          <img
+            id="calligraphy-img"
+            src="./assets/images/stanley-chinese.svg"
+            alt=""
+          />
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li class="icon">
+              <a href="https://github.com/SobaSkee" target="_blank">
+                <img src="./assets/icons/github-icon.svg" alt="Github Icon" />
+              </a>
+            </li>
+            <li class="icon">
+              <a href="https://linkedin.com/in/stanley-ke/" target="_blank">
+                <img
+                  src="./assets/icons/linkedin-icon.svg"
+                  alt="Linkedin Icon"
+                />
+              </a>
+            </li>
+            <li class="icon">
+              <a
+                href="https://discord.com/users/353589602935635969"
+                target="_blank"
+              >
+                <img src="./assets/icons/discord-icon.svg" alt="Discord Icon" />
+              </a>
+            </li>
+            <li class="icon">
+              <a href="https://www.instagram.com/SobaSke/" target="_blank">
+                <img
+                  src="./assets/icons/instagram-icon.svg"
+                  alt="Instagram Icon"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section 2: about -->
+      <section class="about hidden" id="about">
+        <h1>About Me</h1>
+        <div class="container">
+          <div class="image-wrapper">
+            <img src="./assets/images/Boats.JPG" alt="" />
+          </div>
+          <div class="text-wrapper">
+            <p>
+              Hello! I'm a second-year computer science student at the
+              University of Florida with a passion for
+              <span>front-end web development</span> and creating new things.
+            </p>
+            <p>
+              While my current goal is to secure a swe internship, I'm learning
+              to enjoy the journey. As Yoshihiro Togashi, one of my favorite
+              manga authors, once said:
+            </p>
+            <blockquote>
+              <p>
+                <em
+                  >You should enjoy the little detours to the fullest. Because
+                  that's where you'll find the things more important than what
+                  you want.</em
+                >
+              </p>
+            </blockquote>
+            <p>
+              There's a vast sea of knowledge I've yet to explore. Join me as I
+              set sail!
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--section 3: skills-->
+      <section class="skills hidden" id="skills">
+        <div class="container">
+          <h1>Skills</h1>
+          <h2>Development Tools</h2>
+          <div class="slider">
+            <div class="slide-track" id="left-slide-track">
+              <div class="slide">
+                <img src="./assets/icons/html-icon.svg" alt="html" />
+                <p>HTML</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/css-icon.svg" alt="css" />
+                <p>CSS</p>
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/icons/javascript-icon.svg"
+                  alt="javascript"
+                />
+                <p>JS</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/react-icon.svg" alt="react" />
+                <p>React</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/python-icon.svg" alt="python" />
+                <p>Python</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/cplusplus-icon.svg" alt="cplusplus" />
+                <p>C++</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/html-icon.svg" alt="html" />
+                <p>HTML</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/css-icon.svg" alt="css" />
+                <p>CSS</p>
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/icons/javascript-icon.svg"
+                  alt="javascript"
+                />
+                <p>JS</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/react-icon.svg" alt="react" />
+                <p>React</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/python-icon.svg" alt="python" />
+                <p>Python</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/cplusplus-icon.svg" alt="cplusplus" />
+                <p>C++</p>
+              </div>
             </div>
-            <div class="name-imgs">
-                <div class="lottie-animation1-container">
-                    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-                    <dotlottie-player id="lottie-animation1" src="https://lottie.host/f9d710b4-05f6-414b-b27b-606d57e92271/1NXFujYP0g.json" background="transparent" speed="1" direction="1" playMode="normal" autoplay></dotlottie-player>
-                </div>
-                <img id="calligraphy-img" src="./assets/images/stanley-chinese.svg" alt="">
+          </div>
+          <h2>Environments</h2>
+          <div class="slider">
+            <div class="slide-track" id="right-slide-track">
+              <div class="slide">
+                <img src="./assets/icons/figma-icon.svg" alt="figma" />
+                <p>Figma</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/photoshop-icon.svg" alt="photoshop" />
+                <p>Photoshop</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/git-icon.svg" alt="git" />
+                <p>Git</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/vscode-icon.svg" alt="vscode" />
+                <p>VSCode</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/pycharm-icon.svg" alt="pycharm" />
+                <p>Pycharm</p>
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/icons/microsoft-suite-icon.svg"
+                  alt="ms suite"
+                />
+                <p>MS Suite</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/figma-icon.svg" alt="figma" />
+                <p>Figma</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/photoshop-icon.svg" alt="photoshop" />
+                <p>Photoshop</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/git-icon.svg" alt="git" />
+                <p>Git</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/vscode-icon.svg" alt="vscode" />
+                <p>VSCode</p>
+              </div>
+              <div class="slide">
+                <img src="./assets/icons/pycharm-icon.svg" alt="pycharm" />
+                <p>Pycharm</p>
+              </div>
+              <div class="slide">
+                <img
+                  src="./assets/icons/microsoft-suite-icon.svg"
+                  alt="ms suite"
+                />
+                <p>MS Suite</p>
+              </div>
             </div>
-            <div class="social-icons">
-                <ul>
-                    <li class="icon"><a href="https://github.com/SobaSkee" target="_blank"><img src="./assets/icons/github-icon.svg" alt="Github Icon"></a></li>
-                    <li class="icon"><a href="https://linkedin.com/in/stanley-ke/" target="_blank"><img src="./assets/icons/linkedin-icon.svg" alt="Linkedin Icon"></a></li>
-                    <li class="icon"><a href="https://discord.com/users/353589602935635969" target="_blank"><img src="./assets/icons/discord-icon.svg" alt="Discord Icon"></a></li>
-                    <li class="icon"><a href="https://www.instagram.com/SobaSke/" target="_blank"><img src="./assets/icons/instagram-icon.svg" alt="Instagram Icon"></a></li>
-                </ul>  
+          </div>
+        </div>
+      </section>
+      <!--section 4: projects-->
+      <section class="projects hidden" id="projects">
+        <h1>Projects</h1>
+        <div class="container">
+          <div class="card card-1 hidden">
+            <div class="card-content">
+              <h2 class="card-title">Minesweeper</h2>
+              <div class="tools">
+                <div class="tool">
+                  <img
+                    src="./assets/icons/cplusplus-icon.svg"
+                    alt="cplusplus"
+                  />
+                  <p>C++</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Built minesweeper with a leaderboard using SFML libraries, fully
+                interactive and playable
+              </p>
+              <div class="learn-more">
+                <img src="./assets/icons/github-icon.svg" alt="Github Icon" />
+                <p>Repository</p>
+                <a
+                  href="https://github.com/SobaSkee/Minesweeper"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/icons/external-link-icon.svg"
+                    alt="external link"
+                  />
+                </a>
+              </div>
             </div>
-        </section>
-        <!-- section 2: about -->
-        <section class="about hidden" id="about">
-            <h1>About Me</h1>
-            <div class="container">
-                <div class="image-wrapper">
-                    <img src="./assets/images/Boats.JPG" alt="">
+          </div>
+          <div class="card card-2 hidden">
+            <div class="card-content">
+              <h2 class="card-title">PizzaHat</h2>
+              <div class="tools">
+                <div class="tool">
+                  <img src="./assets/icons/html-icon.svg" alt="html" />
+                  <p>HTML</p>
                 </div>
-                
-                <div class="text-wrapper">
-                    <p>Hello! I'm a second-year computer science student at the University of Florida with a passion for <span>front-end web development</span> and creating new things.</p>
-                    <p>While my current goal is to secure a swe internship, I'm learning to enjoy the journey. As Yoshihiro Togashi, one of my favorite manga authors, once said:</p>
-                    <blockquote>
-                        <p><em>You should enjoy the little detours to the fullest. Because that's where you'll find the things more important than what you want.</em></p>
-                    </blockquote>
-                    <p>There's a vast sea of knowledge I've yet to explore. Join me as I set sail!</p>
+                <div class="tool">
+                  <img src="./assets/icons/css-icon.svg" alt="css" />
+                  <p>CSS</p>
                 </div>
+                <div class="tool">
+                  <img
+                    src="./assets/icons/javascript-icon.svg"
+                    alt="javascript"
+                  />
+                  <p>Javascript</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Mockup of a pizza restaurant ordering page with smooth
+                transitions and selectable options
+              </p>
+              <div class="learn-more">
+                <img src="./assets/icons/github-icon.svg" alt="Github Icon" />
+                <p>Repository</p>
+                <a href="https://github.com/SobaSkee/pizzahat" target="_blank">
+                  <img
+                    src="./assets/icons/external-link-icon.svg"
+                    alt="external link"
+                  />
+                </a>
+              </div>
             </div>
-        </section>
-        <!--section 3: skills-->
-        <section class="skills hidden" id="skills">
-            <div class="container">
-                <h1>Skills</h1>
-                <h2>Development Tools</h2>
-                <div class="slider">
-                    <div class="slide-track" id="left-slide-track">
-                        <div class="slide">
-                            <img src="./assets/icons/html-icon.svg" alt="html">
-                            <p>HTML</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/css-icon.svg" alt="css">
-                            <p>CSS</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/javascript-icon.svg" alt="javascript">
-                            <p>JS</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/react-icon.svg" alt="react">
-                            <p>React</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/python-icon.svg" alt="python">
-                            <p>Python</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/cplusplus-icon.svg" alt="cplusplus">
-                            <p>C++</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/html-icon.svg" alt="html">
-                            <p>HTML</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/css-icon.svg" alt="css">
-                            <p>CSS</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/javascript-icon.svg" alt="javascript">
-                            <p>JS</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/react-icon.svg" alt="react">
-                            <p>React</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/python-icon.svg" alt="python">
-                            <p>Python</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/cplusplus-icon.svg" alt="cplusplus">
-                            <p>C++</p>
-                        </div>
-                    </div>
+          </div>
+          <div class="card card-3 hidden">
+            <div class="card-content">
+              <h2 class="card-title">SobaCinema</h2>
+              <div class="tools">
+                <div class="tool">
+                  <img src="./assets/icons/html-icon.svg" alt="htmk" />
+                  <p>HTML</p>
                 </div>
-                <h2>Environments</h2>
-                <div class="slider">
-                    <div class="slide-track" id="right-slide-track">
-                        <div class="slide">
-                            <img src="./assets/icons/figma-icon.svg" alt="figma">
-                            <p>Figma</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/photoshop-icon.svg" alt="photoshop">
-                            <p>Photoshop</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/git-icon.svg" alt="git">
-                            <p>Git</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/vscode-icon.svg" alt="vscode">
-                            <p>VSCode</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/pycharm-icon.svg" alt="pycharm">
-                            <p>Pycharm</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/microsoft-suite-icon.svg" alt="ms suite">
-                            <p>MS Suite</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/figma-icon.svg" alt="figma">
-                            <p>Figma</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/photoshop-icon.svg" alt="photoshop">
-                            <p>Photoshop</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/git-icon.svg" alt="git">
-                            <p>Git</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/vscode-icon.svg" alt="vscode">
-                            <p>VSCode</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/pycharm-icon.svg" alt="pycharm">
-                            <p>Pycharm</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./assets/icons/microsoft-suite-icon.svg" alt="ms suite">
-                            <p>MS Suite</p>
-                        </div>
-                    </div>
+                <div class="tool">
+                  <img src="./assets/icons/css-icon.svg" alt="css" />
+                  <p>CSS</p>
                 </div>
+                <div class="tool">
+                  <img src="./assets/icons/react-icon.svg" alt="react" />
+                  <p>React</p>
+                </div>
+                <div class="tool">
+                  <img
+                    src="./assets/icons/javascript-icon.svg"
+                    alt="javascript"
+                  />
+                  <p>Javascript</p>
+                </div>
+              </div>
+              <p class="card-description">
+                Utilized the react framework and incorporated the OMDb API to
+                build a simple searchable movie website
+              </p>
+              <div class="learn-more">
+                <img src="./assets/icons/github-icon.svg" alt="Github Icon" />
+                <p>Repository</p>
+                <a
+                  href="https://github.com/SobaSkee/react-movie-app"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/icons/external-link-icon.svg"
+                    alt="external link"
+                  />
+                </a>
+              </div>
             </div>
-        </section>
-        <!--section 4: projects-->
-        <section class="projects hidden" id="projects">
-            <h1>Projects</h1>
-            <div class="container">
-                <div class="card card-1 hidden">
-                    <div class="card-content">
-                        <h2 class="card-title">Minesweeper</h2>
-                        <div class="tools">
-                            <div class="tool">
-                                <img src="./assets/icons/cplusplus-icon.svg" alt="cplusplus">
-                                <p>C++</p>
-                            </div>
-                        </div>
-                        <p class="card-description">Built minesweeper with a leaderboard using SFML libraries, fully interactive and playable</p>
-                        <div class="learn-more">
-                            <img src="./assets/icons/github-icon.svg" alt="Github Icon">
-                            <p>Repository</p>
-                            <a href="https://github.com/SobaSkee/Minesweeper" target="_blank"><img src="./assets/icons/external-link-icon.svg" alt="external link"></a>
-                        </div>
-                    </div>
+            <!-- <img src="./assets/images/sobacinema-screenshot.png" alt=""> -->
+          </div>
+          <div class="card card-5 hidden">
+            <div class="card-content">
+              <h2 class="card-title">EnviroPact</h2>
+              <div class="tools">
+                <div class="tool">
+                  <img src="./assets/icons/react-icon.svg" alt="react" />
+                  <p>React</p>
                 </div>
-                <div class="card card-2 hidden">
-                    <div class="card-content">
-                        <h2 class="card-title">PizzaHat</h2>
-                        <div class="tools">
-                            <div class="tool">
-                                <img src="./assets/icons/html-icon.svg" alt="html">
-                                <p>HTML</p>
-                            </div>
-                            <div class="tool">
-                                <img src="./assets/icons/css-icon.svg" alt="css">
-                                <p>CSS</p>
-                            </div>
-                            <div class="tool">
-                                <img src="./assets/icons/javascript-icon.svg" alt="javascript">
-                                <p>Javascript</p>
-                            </div>
-                        </div>
-                        <p class="card-description">Mockup of a pizza restaurant ordering page with smooth transitions and selectable options</p>
-                        <div class="learn-more">
-                            <img src="./assets/icons/github-icon.svg" alt="Github Icon">
-                            <p>Repository</p>
-                            <a href="https://github.com/SobaSkee/pizzahat" target="_blank"><img src="./assets/icons/external-link-icon.svg" alt="external link"></a>
-                        </div>
-                    </div>
+                <div class="tool">
+                  <img
+                    src="./assets/icons/tailwindcss-icon.svg"
+                    alt="tailwind css"
+                  />
+                  <p>Tailwind CSS</p>
                 </div>
-                <div class="card card-3 hidden">
-                    <div class="card-content">
-                        <h2 class="card-title">SobaCinema</h2>
-                        <div class="tools">
-                            <div class="tool">
-                                <img src="./assets/icons/html-icon.svg" alt="htmk">
-                                <p>HTML</p>
-                            </div>
-                            <div class="tool">
-                                <img src="./assets/icons/css-icon.svg" alt="css">
-                                <p>CSS</p>
-                            </div>
-                            <div class="tool">
-                                <img src="./assets/icons/react-icon.svg" alt="react">
-                                <p>React</p>
-                            </div>
-                            <div class="tool">
-                                <img src="./assets/icons/javascript-icon.svg" alt="javascript">
-                                <p>Javascript</p>
-                            </div>
-                        </div>
-                        <p class="card-description">Utilized the react framework and incorporated the OMDb API to build a simple searchable movie website</p>
-                        <div class="learn-more">
-                            <img src="./assets/icons/github-icon.svg" alt="Github Icon">
-                            <p>Repository</p>
-                            <a href="https://github.com/SobaSkee/react-movie-app" target="_blank"><img src="./assets/icons/external-link-icon.svg" alt="external link"></a>
-                        </div>
-                    </div>
-                    <!-- <img src="./assets/images/sobacinema-screenshot.png" alt=""> -->
-                </div>
-                <div class="card card-4 hidden">
-                    <div class="card-content">
-                        <h2 class="card-title">Something special...</h2>
-                        <div class="tools">
-                            <div class="tool">
-                                <img src="" alt="">
-                                <p>...</p>
-                            </div>
-                        </div>
-                        <p class="card-description">Coming soon...</p>
-                        <div class="learn-more">
-                            <img src="./assets/icons/github-icon.svg" alt="Github Icon">
-                            <p>Repository</p>
-                            <a><img src="./assets/icons/external-link-icon.svg" alt="external link"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--section 5: contacts-->
-        <section class="contact hidden" id="contact">
-            <div class="contact-container">
-                <form action="https://api.web3forms.com/submit" method="post">
-                    <input type="hidden" name="access_key" value="3764e507-7d2b-4e4a-9398-08b31f19b004">
 
-                    <h1>Let’s Talk</h1>
-                    <div class="name-form">
-                        <label for="first-name">
-                            <p>First name</p>
-                            <input type="text" id="first-name" name="first" placeholder="Somebody" autocomplete="off" required>
-                        </label>
-                        <label for="last-name">
-                            <p>Last name</p>
-                            <input type="text" id="last-name" name="last" placeholder="Cool" autocomplete="off" required>
-                        </label>
-                    </div>
-                    <div class="email-form">
-                        <label for="email">
-                            <p>Email</p>
-                            <input type="email" id="email" name="email" placeholder="something@email.com" autocomplete="off" required>
-                        </label>
-                        <label for="message">
-                            <p>Message</p>
-                            <textarea name="message" id="message" cols="60" rows="5" placeholder="Enter your question or message" autocomplete="off" required></textarea>
-                        </label>
-                        <button type="submit">Send email</button>
-                    </div>
-                </form>
-                <div class="resume-container">
-                    <h2>My Resume</h2>
-                    <a id="download-button" href="./assets/Stanley_Ke_Resume.pdf" download="Stanley_Ke_Resume.pdf">
-                        <p>Download</p>
-                        <svg id="download-svg" width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="download-04">
-                            <path id="Vector" d="M12.5002 15.6042V5.1875M12.5002 15.6042C11.7708 15.6042 10.408 13.5268 9.896 13M12.5002 15.6042C13.2295 15.6042 14.5924 13.5268 15.1043 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path id="Vector_2" d="M20.8332 17.6875C20.8332 20.2729 20.2936 20.8125 17.7082 20.8125H7.2915C4.70609 20.8125 4.1665 20.2729 4.1665 17.6875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </g>
-                        </svg>
-                    </a>
-                    <h2>Connect with me here</h2>
-                    <div class="social-icons">
-                        <ul>
-                            <li class="icon"><a href="https://github.com/SobaSkee" target="_blank"><img src="./assets/icons/github-icon.svg" alt="Github Icon"></a></li>
-                            <li class="icon"><a href="https://linkedin.com/in/stanley-ke/" target="_blank"><img src="./assets/icons/linkedin-icon.svg" alt="Linkedin Icon"></a></li>
-                            <li class="icon"><a href="https://discord.com/users/353589602935635969" target="_blank"><img src="./assets/icons/discord-icon.svg" alt="Discord Icon"></a></li>
-                            <li class="icon"><a href="https://www.instagram.com/SobaSke/" target="_blank"><img src="./assets/icons/instagram-icon.svg" alt="Instagram Icon"></a></li>
-                        </ul>  
-                    </div>
+                <div class="tool">
+                  <img
+                    src="./assets/icons/javascript-icon.svg"
+                    alt="javascript"
+                  />
+                  <p>Javascript</p>
                 </div>
+              </div>
+              <p class="card-description">
+                Designed and developed an engaging web platform for SASEHacks
+                2024, fostering community involvement in local sustainable
+                events
+              </p>
+              <div class="learn-more">
+                <img src="./assets/icons/github-icon.svg" alt="Github Icon" />
+                <p>Repository</p>
+                <a
+                  href="https://github.com/Kavipatel0/SASEHacks2024"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/icons/external-link-icon.svg"
+                    alt="external link"
+                  />
+                </a>
+              </div>
             </div>
-        </section>
+            <!-- <img src="./assets/images/sobacinema-screenshot.png" alt=""> -->
+          </div>
+          <div class="card card-4 hidden">
+            <div class="card-content">
+              <h2 class="card-title">Something special...</h2>
+              <div class="tools">
+                <div class="tool">
+                  <img src="" alt="" />
+                  <p>...</p>
+                </div>
+              </div>
+              <p class="card-description">Coming soon...</p>
+              <div class="learn-more">
+                <img src="./assets/icons/github-icon.svg" alt="Github Icon" />
+                <p>Repository</p>
+                <a>
+                  <img
+                    src="./assets/icons/external-link-icon.svg"
+                    alt="external link"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--section 5: contacts-->
+      <section class="contact hidden" id="contact">
+        <div class="contact-container">
+          <form action="https://api.web3forms.com/submit" method="post">
+            <input
+              type="hidden"
+              name="access_key"
+              value="3764e507-7d2b-4e4a-9398-08b31f19b004"
+            />
+            <h1>Let’s Talk</h1>
+            <div class="name-form">
+              <label for="first-name">
+                <p>First name</p>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first"
+                  placeholder="Somebody"
+                  autocomplete="off"
+                  required
+                />
+              </label>
+              <label for="last-name">
+                <p>Last name</p>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last"
+                  placeholder="Cool"
+                  autocomplete="off"
+                  required
+                />
+              </label>
+            </div>
+            <div class="email-form">
+              <label for="email">
+                <p>Email</p>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="something@email.com"
+                  autocomplete="off"
+                  required
+                />
+              </label>
+              <label for="message">
+                <p>Message</p>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="60"
+                  rows="5"
+                  placeholder="Enter your question or message"
+                  autocomplete="off"
+                  required
+                ></textarea>
+              </label>
+              <button type="submit">Send email</button>
+            </div>
+          </form>
+          <div class="resume-container">
+            <h2>My Resume</h2>
+            <a
+              id="download-button"
+              href="./assets/Stanley_Ke_Resume.pdf"
+              download="Stanley_Ke_Resume.pdf"
+            >
+              <p>Download</p>
+              <svg
+                id="download-svg"
+                width="25"
+                height="26"
+                viewBox="0 0 25 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="download-04">
+                  <path
+                    id="Vector"
+                    d="M12.5002 15.6042V5.1875M12.5002 15.6042C11.7708 15.6042 10.408 13.5268 9.896 13M12.5002 15.6042C13.2295 15.6042 14.5924 13.5268 15.1043 13"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    id="Vector_2"
+                    d="M20.8332 17.6875C20.8332 20.2729 20.2936 20.8125 17.7082 20.8125H7.2915C4.70609 20.8125 4.1665 20.2729 4.1665 17.6875"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+              </svg>
+            </a>
+            <h2>Connect with me here</h2>
+            <div class="social-icons">
+              <ul>
+                <li class="icon">
+                  <a href="https://github.com/SobaSkee" target="_blank">
+                    <img
+                      src="./assets/icons/github-icon.svg"
+                      alt="Github Icon"
+                    />
+                  </a>
+                </li>
+                <li class="icon">
+                  <a href="https://linkedin.com/in/stanley-ke/" target="_blank">
+                    <img
+                      src="./assets/icons/linkedin-icon.svg"
+                      alt="Linkedin Icon"
+                    />
+                  </a>
+                </li>
+                <li class="icon">
+                  <a
+                    href="https://discord.com/users/353589602935635969"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/icons/discord-icon.svg"
+                      alt="Discord Icon"
+                    />
+                  </a>
+                </li>
+                <li class="icon">
+                  <a href="https://www.instagram.com/SobaSke/" target="_blank">
+                    <img
+                      src="./assets/icons/instagram-icon.svg"
+                      alt="Instagram Icon"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- end sections -->
     <footer>
-        <a id="download-icon" href="#home"><img src="./assets/icons/up-icon.svg" alt="up icon"></a>
-        <div class="container">
-            <p>© 2024 SK</p>
-        </div>
+      <a id="download-icon" href="#home">
+        <img src="./assets/icons/up-icon.svg" alt="up icon" />
+      </a>
+      <div class="container">
+        <p>© 2024 SK</p>
+      </div>
     </footer>
-</body>
-<script src="main.js"></script>
+  </body>
+  <script src="main.js"></script>
 </html>
